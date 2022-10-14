@@ -12,8 +12,11 @@
     - class: {String} (optional) Appended to container element's class attribute
 {% endcomment %}
 
-<link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-component-pagination.css' %}
+
+{% comment %} <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript> {% endcomment %}
 
 {%- if paginate.parts.size > 0 -%}
   <div class="{{ class | default: 'pagination-wrapper' }}">

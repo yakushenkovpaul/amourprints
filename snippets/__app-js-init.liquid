@@ -1,0 +1,80 @@
+<script>
+	var is_admin_interface={{ is_admin_interface }};
+	var is_default_tracking = true;
+	var template_name='{{ template.name }}';
+	var canonical_url='{{ canonical_url }}';
+	var request_path='{{ request.path }}';
+	var timerStart = Date.now();
+
+	var __engine_loaded=[];
+	var __engine_scriptspreloading=[];	
+	var __engine_scriptsloading=[];
+	var __engine_scriptsloaded=[];
+	var __engine_other=[];
+	var __engine_asyncloading=[];
+	var __engine_event=[];
+	var __engine_objects_queue = [];
+	var __engine_scripts_queue=[];
+	var __exceptions = [];
+
+	var shogun_page=false;
+
+	if(is_default_tracking)
+	{
+		window.core2 = true;
+	}	
+
+	/* CONFIG_START */
+	console.log('%c Speed Optimization by SpeedUP.GURU ', 'background: #bada55; color: #000000');
+	console.log('build 1.000016');
+
+	//textarea #1 - config
+	var engine = {}; engine.settings = {
+		'global': {
+			'debug': false,
+			'fend': {
+				'files': true,
+				'inline': true,
+			},
+			'l': 'YW1vdXJwcmludHMuY29tZ3RndGNMQTNA'
+		},
+		'__opt1': {'p': 1000,'s': 2700,'t': (is_default_tracking) ? 0 : 900,'o': 3500,'a': 3500},
+		'__opt2': {'p': 100,'s': 150,'t': (is_default_tracking) ? 0 : 600,'o': 1850,'a': 3500}
+	}
+
+	engine.settings["global"]['time'] = 1840633182;
+
+	//textarea #2 - queue
+	__engine_objects_queue['loaded'] = ['loaded'];
+	__engine_objects_queue['scriptspreloading'] = ['lazypreload'];
+	__engine_objects_queue['scriptsloading'] = ['recaptcha'];
+	__engine_objects_queue['scriptsloaded'] = [];
+	__engine_objects_queue['other'] = [];
+	__engine_objects_queue['event'] = ['video', 'buyitnow', 'link-href', 'data-gif'];
+
+	//textarea #3 - exceptions
+	__exceptions['js'] = [];
+	__exceptions['js']['preloading'] = [];
+	__exceptions['js']['app-preloading'] = [];
+	__exceptions['js']['class'] = ['__init'];
+	__exceptions['js']['id'] = [''];
+	__exceptions['js']['src'] = [];
+	__exceptions['js']['data-src'] = ['__app-backend.js', 'option_selection'];
+	__exceptions['js']['innerHTML'] = [
+		'window.ShopifyAnalytics = window.ShopifyAnalytics'
+	];
+
+	/* CONFIG_END */
+
+	window.lazySizesConfig = {
+		init: true,
+		loadMode: 1,
+		loadHidden: false,
+		hFac: 0.5,
+		expFactor: 2,
+		ricTimeout: 150,
+		lazyClass: 'lazyload',
+		loadingClass: 'lazyloading',
+		loadedClass: 'lazyloaded'
+	};
+</script>

@@ -1,0 +1,102 @@
+<script data-preload="{{ '__app-jquery.js' | asset_url }}" src="{{ '__app-backend.js' | asset_url }}"></script>
+
+{% comment %} 
+<script src="{{ '__app-backend.js' | asset_url }}"></script>
+<script src="{{ '__app-jquery.js' | asset_url }}"></script> 
+{% endcomment %}
+
+<script class="__init">
+
+	if(shogun_page)
+	{
+		__engine_objects_queue['scriptsloading'].push('shogun');
+	}
+
+	__engine_scripts_queue['loaded'] = function()
+	{
+		//from global.js
+		jQuery('.faq_toggle').click(function() {
+				//e.preventDefault();
+				var $this = jQuery(this);
+					$this.toggleClass('faq_toggle_open');
+				if ($this.parent().next().hasClass('faq_toggle_show')) {
+						$this.parent().next().removeClass('faq_toggle_show');
+						$this.parent().next().slideUp(350);
+				} else {
+						$this.parent().parent().find('li .faq_inner').removeClass('faq_toggle_show');
+						$this.parent().parent().find('li .faq_inner').slideUp(350);
+						$this.parent().next().toggleClass('faq_toggle_show');
+						$this.parent().next().slideToggle(350);
+				}
+		});
+	}
+
+	__engine_scripts_queue['lazypreload'] = function()
+	{
+		$(".lazypreload").addClass('lazyload').removeClass('lazypreload');
+	}
+
+	__engine_scripts_queue['video'] = function()
+	{
+		$( "iframe[data-src]" ).each(function() {
+			$(this).attr('src', $(this).data('src'));
+			//$(this).wrap('<div class="video-wrapper"></div>');
+		});
+	}
+
+	__engine_scripts_queue['link-href'] = function()
+	{
+		$( "link[data-href]" ).each(function() {
+			$(this).attr('href', $(this).data('href'));
+		});
+	}
+
+	__engine_scripts_queue['data-gif'] = function()
+	{
+		$( "img[data-gif]" ).each(function() {
+			$(this).attr('src', $(this).data('gif'));
+		});
+	}
+
+	__engine_scripts_queue['video-native'] = function()
+	{
+		$( "video[data-src]" ).each(function() {
+			$(this).attr('src', $(this).data('src'));
+			//$(this).wrap('<div class="video-wrapper"></div>');
+		});
+
+		$( "source[data-src]" ).each(function() {
+			$(this).parent().attr('src', $(this).data('src'));
+		});
+	}	
+
+	__engine_scripts_queue['footer'] = function()
+	{
+		if($("#__load-section-footer" ).length) {
+			$.ajax({
+				url: "{{ shop.url }}?section_id=footer",
+				cache: true
+			})
+			.done(function( html ) {
+				$( "#__load-section-footer" ).append( html );
+			}); 
+		}
+	}
+
+	__engine_scripts_queue['previewBar'] = function()
+	{
+		loadJS($("script[data-src*='preview_bar']").attr('data-src'), function()
+		{
+			const __previewBarInjector = new Shopify.PreviewBarInjector({
+				targetNode: document.body,
+				iframeRoot: 'https://rangetarps.com',
+				iframeSrc: 'https://rangetarps.com/preview_bar',
+				previewToken: '0krleuc987ilsta1',
+				themeStoreId: '',
+				permanentDomain: 'rangetarps.myshopify.com',
+			});
+			__previewBarInjector.init();
+		})
+	}		
+
+</script>

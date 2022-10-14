@@ -990,7 +990,7 @@ ul.faq_accordion .faq_inner {
         padding: 50px 100px;
     }
 }
-}body, p , a , span, div , h1, h2 , h3 , h4 , h5, .h0, .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 
+body, p , a , span, div , h1, h2 , h3 , h4 , h5, .h0, .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 
 {
 	font-family: Rubik,sans-serif !important;
 }
@@ -1324,8 +1324,8 @@ nav.header__inline-menu.xsrn2 {
 .banner__content .banner__box {
     background-color: transparent;
     text-align: left;
-    padding-top
-      margin-left: 0;: 0;
+    padding-top: 0;
+		margin-left: 0;
 }
 
 .banner__content {

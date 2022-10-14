@@ -1,5 +1,9 @@
+{% comment %} aaaaqqqq777 {% endcomment %}
+
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+{% render '__css-component-card.css' %}
+{% comment %} {{ 'component-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
 

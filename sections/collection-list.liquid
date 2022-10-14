@@ -1,5 +1,9 @@
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-section-collection-list.css' %}
+{% render '__css-component-card.css' %}
+
+{% comment %} {{ 'section-collection-list.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 <div class="collection-list-wrapper page-width{% if section.settings.swipe_on_mobile == true %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %}">
   <div class="title-wrapper-with-link{% if section.settings.swipe_on_mobile == true %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %}{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
@@ -39,7 +43,6 @@
                       alt="{{ block.settings.collection.title | escape }}"
                       height="{{ block.settings.collection.image.height }}"
                       width="{{ block.settings.collection.image.width }}"
-                      loading="lazy"
                       class="motion-reduce"
                     >
                   </div>

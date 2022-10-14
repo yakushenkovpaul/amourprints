@@ -1,5 +1,9 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-component-card.css' %}
+{% render '__css-section-collection-list.css' %}
+
+{% comment %} {{ 'component-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'section-collection-list.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 <div class="page-width">
   <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
@@ -41,7 +45,6 @@
                     alt="{{ collection.title | escape }}"
                     height="{{ collection.image.height }}"
                     width="{{ collection.image.width }}"
-                    loading="lazy"
                   >
                 </div>
               </div>

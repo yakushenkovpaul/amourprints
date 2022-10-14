@@ -1,13 +1,25 @@
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
-{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-{{ 'component-badge.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-rte.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-section-main-product.css' %}
+{% render '__css-component-accordion.css' %}
+{% render '__css-component-badge.css' %}
+{% render '__css-component-price.css' %}
+{% render '__css-component-rte.css' %}
+{% render '__css-component-slider.css' %}
+
+{% render '__css-component-cart-notification.css' %}
+{% render '__css-component-deferred-media.css' %}
+
+{% comment %} {{ 'section-main-product.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-accordion.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-badge.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-price.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-rte.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-slider.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+{% comment %} <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
@@ -27,13 +39,13 @@
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign media = product.selected_or_first_available_variant.featured_media -%}
             <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
+              {% render 'product-thumbnail', forloop_index: forloop.index, media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id %}
             </li>
           {%- endif -%}
           {%- for media in product.media -%}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
               <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id %}
+                {% render 'product-thumbnail', forloop_index: forloop.index, media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id %}
               </li>
             {%- endunless -%}
           {%- endfor -%}
@@ -99,7 +111,8 @@
           </div>
           {%- comment -%}
           {%- endcomment -%}
-          {% include 'product_delivery_order_status' %}
+					{% comment %} aaaaqqqq777 {% endcomment %}
+          {% comment %} {% include 'product_delivery_order_status' %} {% endcomment %}
           {%- when 'price' -%}
             <div class="price-section no-js-hidden" id="price-{{ section.id }}">
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -477,8 +490,10 @@
     <!-- END TrustedSite Testimonial Code on mobile-->
        
   </div>
+			{% comment %} aaaaqqqq777 {% endcomment %}
+			{% render '__css-component-pickup-availability.css' %}
 
-      {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+      {% comment %} {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
             {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
@@ -521,7 +536,6 @@
               sizes="(min-width: 750px) calc(100vw - 12rem), 100vw"
               src="{{ media.preview_image | img_url: '750x' }}"
               alt="{{ media.alt | escape }}"
-              loading="lazy"
               width="1100"
               height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
               data-media-id="{{ media.id }}"
@@ -549,7 +563,6 @@
                           {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
                   src="{{ media | img_url: '550x550' }}"
                   sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-                  loading="lazy"
                   width="576"
                   height="{{ 576 | divided_by: media.preview_image.aspect_ratio }}"
                   alt="{{ media.preview_image.alt | escape }}"
@@ -594,13 +607,7 @@
       </div>
     </div>
   </product-modal>
-{%- comment -%}{% if product.id == 6588895101008 or product.id == 6598224117840 or product.id == 6615042162768 or product.id == 6604808880208 or product.id == 6598228213840 or product.id == 4692497793104 or product.id == 4877550649424 or product.id == 4784090873936 or product.id == 4785676386384 or product.id == 4875641782352 or product.id == 6570280419408 %}
-<div id="stamped-main-widget" class="stamped-main-widget"></div>
-{% else %}
-<!-- Stamped - Begin main-widget -->
-<div id="stamped-main-widget" class="stamped-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: " ? ", " % 3F" | replace: "& "," % 26"}}" data-description="{{ product.description | escape }}" data-product-sku="{{product.handle}}" data-product-type="{{product.type}}"> {{ product.metafields.stamped.reviews }} </div>
-<!-- Stamped - End main-widget -->
- {% endif %}{%- endcomment -%}
+
   {% assign popups = section.blocks | where: "type", "popup" %}
   {%- for block in popups -%}
     <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal">
@@ -617,8 +624,8 @@
  
 </section>
 
-
-{% javascript %}
+{% comment %} aaaaqqqq777 {% endcomment %}
+<script>
   class ProductModal extends ModalDialog {
     constructor() {
       super();
@@ -649,7 +656,9 @@
   }
 
   customElements.define('product-modal', ProductModal);
-{% endjavascript %}
+</script>
+
+
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 {%- if first_3d_model -%}
@@ -961,7 +970,36 @@
 }
 {% endschema %}
 
+{% comment %} aaaaqqqq777 {% endcomment %}
 <script>
+	const realFileBtn = document.getElementById("real-file");
+	const customBtn = document.getElementById("upload-picture");
+	const customTxt = document.getElementById("custom-text");
+
+	if (customBtn !== null) {
+		customBtn.addEventListener("click", function() {
+			realFileBtn.click();
+		});
+	}
+
+	if (realFileBtn !== null) {
+		realFileBtn.addEventListener("change", function() {
+			if (realFileBtn.value) {
+				if (customTxt !== null) {
+					customTxt.innerHTML = realFileBtn.value.match(
+						/[\/\\]([\w\d\s\.\-\(\)]+)$/
+					)[1];
+				}
+			} else {
+				if (customTxt !== null) {
+					customTxt.innerHTML = "No file chosen, yet.";
+				}
+			}
+		});
+	}
+</script>
+
+{% comment %} <script>
 const realFileBtn = document.getElementById("real-file");
 const customBtn = document.getElementById("upload-picture");
 const customTxt = document.getElementById("custom-text");
@@ -980,4 +1018,4 @@ realFileBtn.addEventListener("change", function() {
   }
 });
 
-</script>
+</script> {% endcomment %}

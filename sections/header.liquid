@@ -1,12 +1,15 @@
-<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{% comment %} aaaaqqqq777 {% endcomment %}
+
+{% render '__css-component-list-menu.css' %}
+{% render '__css-component-search.css' %}
+{% render '__css-component-menu-drawer.css' %}
+{% render '__css-component-cart-notification.css' %}
+
+{% comment %} <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
 
 <meta name="google-site-verification" content="t3mZlFCoo637gFATKHO5HfbMM3PU-2VcsqBBHWKMJKE" />
 <style>
@@ -392,12 +395,10 @@
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+            <img class="lcp header__heading-logo" srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
               src="{{ section.settings.logo | img_url: image_size }}"
-              loading="lazy"
-              class="header__heading-logo"
-              width="{{ section.settings.logo.width }}"
-              height="{{ section.settings.logo.height }}"
+              width="182"
+              height="55"
               alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
             >
           {%- else -%}
@@ -547,7 +548,8 @@
   {%- render 'cart-notification' -%}
 {%- endif -%}
 
-{% javascript %}
+{% comment %} aaaaqqqq777 {% endcomment %}
+<script>
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
@@ -619,7 +621,7 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
-{% endjavascript %}
+</script>
 
 <script type="application/ld+json">
   {

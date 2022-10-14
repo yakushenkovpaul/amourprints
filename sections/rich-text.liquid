@@ -1,8 +1,9 @@
-<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'">
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-component-rte.css' %}
+{% render '__css-section-rich-text.css' %}
 
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}</noscript>
+{% comment %} <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'section-rich-text.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
 
 <div class="rich-text{% if section.settings.full_width %} rich-text--full-width{% endif %} color-{{ section.settings.color_scheme }}">
   <div class="rich-text__blocks">

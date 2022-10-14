@@ -18,7 +18,6 @@
                   {% if article.image.width >= 2200 %}{{ article.image | img_url: '2200x' }} 2200w,{% endif %}"
                 sizes="(min-width: 1200px) 1100px, (min-width: 750px) calc(100vw - 10rem), 100vw"
                 src="{{ article.image | img_url: '1100x' }}"
-                loading="lazy"
                 width="{{ article.image.width }}"
                 height="{{ article.image.height }}"
                 alt="{{ article.image.alt | escape }}">

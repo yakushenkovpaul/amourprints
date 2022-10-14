@@ -1,12 +1,13 @@
-<link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'">
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-component-badge.css' %}
+{% render '__css-component-card.css' %}
+{% render '__css-component-price.css' %}
+{% render '__css-section-product-recommendations.css' %}
 
-<noscript>{{ 'component-badge.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'section-product-recommendations.css' | asset_url | stylesheet_tag }}</noscript>
+{% comment %} <link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'section-product-recommendations.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
 
 <product-recommendations class="product-recommendations page-width" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
   {% if recommendations.performed and recommendations.products_count > 0 %}
@@ -27,7 +28,8 @@
   {% endif %}
 </product-recommendations>
 
-{% javascript %}
+{% comment %} aaaaqqqq777 {% endcomment %}
+<script>
   class ProductRecommendations extends HTMLElement {
     constructor() {
       super();
@@ -56,7 +58,7 @@
   }
 
   customElements.define('product-recommendations', ProductRecommendations);
-{% endjavascript %}
+</script>
 
 {% schema %}
 {

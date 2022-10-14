@@ -1,16 +1,21 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'cf-collections.css' | asset_url | stylesheet_tag }}
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-template-collection.css' %}
+{% render '__css-component-loading-overlay.css' %}
+{% render '__css-cf-collections.css' %}
 
-<link rel="preload" href="{{ 'component-card.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{ 'component-price.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{ 'component-badge.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+{% render '__css-component-card.css' %}
+{% render '__css-component-price.css' %}
+{% render '__css-component-badge.css' %}
+{% render '__css-component-rte.css' %}
 
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-badge.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+{% comment %} {{ 'template-collection.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'cf-collections.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+{% comment %} <link rel="preload" href="{{ 'component-card.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"> {% endcomment %}
+{% comment %} <link rel="preload" href="{{ 'component-price.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"> {% endcomment %}
+{% comment %} <link rel="preload" href="{{ 'component-badge.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"> {% endcomment %}
+{% comment %} <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"> {% endcomment %}
 
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 

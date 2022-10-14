@@ -28,7 +28,6 @@
                   {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
           src="{{ media | img_url: '550x550' }}"
           sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-          loading="lazy"
           width="576"
           height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
           alt="{{ media.preview_image.alt | escape }}"
@@ -44,7 +43,6 @@
                 {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
         src="{{ media | img_url: '550x550' }}"
         sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-        loading="lazy"
         width="576"
         height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
         alt="{{ media.preview_image.alt | escape }}"
@@ -68,18 +66,32 @@
   </span>
 
   <div class="product__media media" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
-    <img
-      srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
-              {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
-              {% if media.preview_image.width >= 550 %}{{ media.preview_image | img_url: '550x' }} 550w,{% endif %}
-              {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
-      src="{{ media | img_url: '550x550' }}"
-      sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-      loading="lazy"
-      width="576"
-      height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-      alt="{{ media.preview_image.alt | escape }}"
-    >
+    {% comment %} aaaaqqqq777 {% endcomment %}
+		{%- assign media_type = media | media_type -%}
+		{%- if forloop_index == 1 -%}
+			<img class="lcp"
+				src="{{ media | img_url: '550x550' }}"
+				{% if media_type contains '.gif' %}
+				data-gif="{{ media | img_url: '550x550' }}"
+				{% endif %}
+				sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+				width="576"
+				height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+				alt="{{ media.preview_image.alt | escape }}"
+			>
+			<!-- {{ template.name }}_image_lcp [{{ media | img_url: '550x550' }}] -->
+		{%- else -%}
+			<img
+				src="{{ media | img_url: '550x550', format: 'pjpg' }}"
+				{% if media_type contains '.gif' %}
+				data-gif="{{ media | img_url: '550x550' }}"
+				{% endif %}
+				sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+				width="576"
+				height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+				alt="{{ media.preview_image.alt | escape }}"
+			>
+		{%- endif -%}
   </div>
 <button class="product__media-toggle" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
   <span class="visually-hidden">
@@ -115,7 +127,6 @@
               {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w{% endif %}"
       src="{{ media | img_url: '550x550' }}"
       sizes="(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-      loading="lazy"
       width="576"
       height="{{ 576 | divided_by: media.preview_image.aspect_ratio }}"
       alt="{{ media.preview_image.alt | escape }}"

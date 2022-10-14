@@ -434,19 +434,3 @@ class DeferredMedia extends HTMLElement {
 }
 
 customElements.define('deferred-media', DeferredMedia);
-
-
-jQuery('.faq_toggle').click(function() {
-  	//e.preventDefault();
-    var $this = jQuery(this);
-    	$this.toggleClass('faq_toggle_open');
-    if ($this.parent().next().hasClass('faq_toggle_show')) {
-        $this.parent().next().removeClass('faq_toggle_show');
-        $this.parent().next().slideUp(350);
-    } else {
-        $this.parent().parent().find('li .faq_inner').removeClass('faq_toggle_show');
-        $this.parent().parent().find('li .faq_inner').slideUp(350);
-        $this.parent().next().toggleClass('faq_toggle_show');
-        $this.parent().next().slideToggle(350);
-    }
-});

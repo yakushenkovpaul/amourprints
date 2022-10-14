@@ -1,14 +1,15 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{% comment %} aaaaqqqq777 {% endcomment %}
+{% render '__css-template-collection.css' %}
+{% render '__css-component-badge.css' %}
+{% render '__css-component-card.css' %}
+{% render '__css-component-price.css' %}
+{% render '__css-component-search.css' %}
 
-<link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-badge.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-price.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+{% comment %} {{ 'template-collection.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-badge.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
+{% comment %} <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'"> {% endcomment %}
 
 <style>
   .template-search__search {
@@ -107,7 +108,6 @@
                                   {%- if item.image.src.width >= 720 -%}{{ item.image.src | img_url: '720x' }} 536w,{%- endif -%}
                                   {%- if item.image.src.width >= 940 -%}{{ item.image.src | img_url: '940x' }} 714w{%- endif -%}"
                               src="{{ item.image.src | img_url: '533x' }}"
-                              loading="lazy"
                               sizes="(min-width: 1200px) 268px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                               width="{{ item.image.src.width }}"
                               height="{{ item.image.src.height }}"

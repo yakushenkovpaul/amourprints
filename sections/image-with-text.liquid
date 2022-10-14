@@ -1,4 +1,6 @@
-{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{% render '__css-component-image-with-text.css' %}
+
+{% comment %} {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 <div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} color-scheme-{{ section.settings.color_scheme }}">
   <div class="image-with-text__grid color-{{ section.settings.color_scheme }}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} grid grid--gapless grid--1-col grid--2-col-tablet">
@@ -16,7 +18,6 @@
             src="{{ section.settings.image | img_url: '533x' }}"
             sizes="(min-width: 1100px) 535px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
             alt="{{ section.settings.image.alt | escape }}"
-            loading="lazy"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
           >

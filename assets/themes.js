@@ -1,4 +1,3 @@
-
 var _createClass = function() {
     function e(e, t) {
         for (var i = 0; i < t.length; i++) {
@@ -251,7 +250,7 @@ function _classCallCheck(e, t) {
         s = i(1),
         a = function() {
             function e(t, i) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.activator = i.activator || document.querySelector('[aria-controls="' + t.getAttribute("id") + '"]'), this.preferredPosition = i.preferredPosition || "bottom", this.preferredAlignment = i.preferredAlignment || void 0, this.threshold = i.threshold || 20, this.isOpen = !1, this.onValueChanged = i.onValueChanged || function() {}, this.onOpen = i.onOpen || function() {}, this.onClose = i.onClose || function() {}, this.showOverlay = void 0 === i.showOverlay || i.showOverlay, this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.activator = i.activator || document.querySelector('[aria-controls="' + t.getAttribute("id") + '"]'), this.preferredPosition = i.preferredPosition || "bottom", this.preferredAlignment = i.preferredAlignment || void 0, this.threshold = i.threshold || 20, this.isOpen = !1, this.onValueChanged = i.onValueChanged || function() {}, this.onOpen = i.onOpen || function() {}, this.onClose = i.onClose || function() {}, this.showOverlay = void 0 === i.showOverlay || i.showOverlay, this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "destroy",
@@ -337,7 +336,7 @@ function _classCallCheck(e, t) {
     });
     var n = function() {
         function e(t) {
-            _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.delegateElement.on("change", ".ColorSwatch__Radio", this._colorChanged.bind(this))
+            _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.delegateElement.on("change", ".ColorSwatch__Radio", this._colorChanged.bind(this))
         }
         return _createClass(e, [{
             key: "_colorChanged",
@@ -451,7 +450,7 @@ function _classCallCheck(e, t) {
         s = (i(7), function() {
             function e(t) {
                 var i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.delegateBody = new domDelegate.Delegate(document.body), this.onOpen = i.onOpen || function() {}, this.onClose = i.onClose || function() {}, this.isOpen = !1, this.direction = this.element.classList.contains("Drawer--fromLeft") ? "fromLeft" : "fromRight", this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.delegateBody = $(document).delegate(document.body), this.onOpen = i.onOpen || function() {}, this.onClose = i.onClose || function() {}, this.isOpen = !1, this.direction = this.element.classList.contains("Drawer--fromLeft") ? "fromLeft" : "fromRight", this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "destroy",
@@ -590,7 +589,7 @@ function _classCallCheck(e, t) {
         l = function() {
             function e(t, i) {
                 var n = this;
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.options = i;
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.options = i;
                 var s = JSON.parse(this.element.querySelector("[data-product-json]").innerHTML);
                 this.productData = s.product, this.variantsInventories = s.inventories || {}, this.masterSelector = this.element.querySelector("#product-select-" + this.productData.id), this.productData.variants.forEach(function(e) {
                     e.id === s.selected_variant_id && (n.currentVariant = e, n.option1 = e.option1, n.option2 = e.option2, n.option3 = e.option3)
@@ -848,7 +847,7 @@ function _classCallCheck(e, t) {
         a = i(1),
         o = function() {
             function e(t, i) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.delegateRoot = new domDelegate.Delegate(document.body), this.slideshow = i, this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.delegateRoot = $(document).delegate(document.body), this.slideshow = i, this._attachListeners()
             }
             return _createClass(e, [{
                 key: "destroy",
@@ -972,7 +971,7 @@ function _classCallCheck(e, t) {
     var n = i(1),
         s = function() {
             function e(t, i) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.delegateRoot = new domDelegate.Delegate(document.documentElement), this.stackProductImages = i, this._attachListeners();
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.delegateRoot = $(document).delegate(document.documentElement), this.stackProductImages = i, this._attachListeners();
                 var n = document.createElement("link");
                 n.rel = "stylesheet", n.href = "https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css", document.head.appendChild(n), window.Shopify.loadFeatures([{
                     name: "model-viewer-ui",
@@ -1025,7 +1024,7 @@ function _classCallCheck(e, t) {
     });
     var n = function() {
         function e(t) {
-            _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.delegateElement.on("click", ".spr-summary-actions-newreview", this._onNewReviewClicked.bind(this)), window.SPRCallbacks = {}, window.SPRCallbacks.onFormSuccess = this._onFormSuccess.bind(this), window.SPRCallbacks.onReviewsLoad = this._onReviewsLoad.bind(this)
+            _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.delegateElement.on("click", ".spr-summary-actions-newreview", this._onNewReviewClicked.bind(this)), window.SPRCallbacks = {}, window.SPRCallbacks.onFormSuccess = this._onFormSuccess.bind(this), window.SPRCallbacks.onReviewsLoad = this._onReviewsLoad.bind(this)
         }
         return _createClass(e, [{
             key: "destroy",
@@ -1070,7 +1069,7 @@ function _classCallCheck(e, t) {
         o = function() {
             function e(t) {
                 var i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.activator = i.activator || document.querySelector('[aria-controls="' + t.getAttribute("id") + '"]'), this.onValueChangedCallback = i.onValueChanged || function() {}, this.isOpen = !1, this.pageOverlayElement = document.querySelector(".PageOverlay"), this.variantChoiceList = a.default.nodeListToArray(this.element.querySelectorAll(".VariantSelector__Choice")), this.variantCarousel = new s.default(this.element.querySelector(".VariantSelector__Carousel"), {
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.activator = i.activator || document.querySelector('[aria-controls="' + t.getAttribute("id") + '"]'), this.onValueChangedCallback = i.onValueChanged || function() {}, this.isOpen = !1, this.pageOverlayElement = document.querySelector(".PageOverlay"), this.variantChoiceList = a.default.nodeListToArray(this.element.querySelectorAll(".VariantSelector__Choice")), this.variantCarousel = new s.default(this.element.querySelector(".VariantSelector__Carousel"), {
                     onSelect: this._variantChanged.bind(this),
                     onClick: this._variantSelected.bind(this)
                 }), this._attachListeners()
@@ -1135,7 +1134,7 @@ function _classCallCheck(e, t) {
     var n = i(1),
         s = function() {
             function e(t, i, n) {
-                switch (_classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.stackProductImages = i, this.enableVideoLooping = n, this.player = null, this.element.getAttribute("data-media-type")) {
+                switch (_classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.stackProductImages = i, this.enableVideoLooping = n, this.player = null, this.element.getAttribute("data-media-type")) {
                     case "video":
                         var s = document.createElement("link");
                         s.rel = "stylesheet", s.href = "https://cdn.shopify.com/shopifycloud/shopify-plyr/v1.0/shopify-plyr.css", document.head.appendChild(s), window.Shopify.loadFeatures([{
@@ -1300,7 +1299,7 @@ function _classCallCheck(e, t) {
         a = i(12),
         o = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.countrySelector = new a.default(this.element.querySelector('[name="country"]'), this.element.querySelector('[name="province"]')), this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.countrySelector = new a.default(this.element.querySelector('[name="country"]'), this.element.querySelector('[name="province"]')), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "onUnload",
@@ -1481,7 +1480,7 @@ function _classCallCheck(e, t) {
         a = i(1),
         o = function() {
             function e() {
-                _classCallCheck(this, e), this.domDelegate = new domDelegate.Delegate(document.body), this._attachListeners()
+                _classCallCheck(this, e), this.domDelegate = $(document).delegate(document.body), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "_attachListeners",
@@ -1549,7 +1548,7 @@ function _classCallCheck(e, t) {
     var n = i(5),
         s = function() {
             function e() {
-                _classCallCheck(this, e), this.domDelegate = new domDelegate.Delegate(document.body), this.activeModal = null, this.wasLocked = !1, this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners(), this._checkOpenByHash()
+                _classCallCheck(this, e), this.domDelegate = $(document).delegate(document.body), this.activeModal = null, this.wasLocked = !1, this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners(), this._checkOpenByHash()
             }
             return _createClass(e, [{
                 key: "_attachListeners",
@@ -1612,7 +1611,7 @@ function _classCallCheck(e, t) {
     });
     var n = function() {
         function e() {
-            _classCallCheck(this, e), this.domDelegate = new domDelegate.Delegate(document.body), this.pageTransition = document.querySelector(".PageTransition"), this._attachListeners()
+            _classCallCheck(this, e), this.domDelegate = $(document).delegate(document.body), this.pageTransition = document.querySelector(".PageTransition"), this._attachListeners()
         }
         return _createClass(e, null, [{
             key: "getInstance",
@@ -1645,7 +1644,7 @@ function _classCallCheck(e, t) {
     var n = i(5),
         s = function() {
             function e() {
-                _classCallCheck(this, e), this.documentDelegate = new domDelegate.Delegate(document.body), this.searchElement = document.getElementById("Search"), this.searchInputElement = this.searchElement.querySelector('[name="q"]'), this.searchResultsElement = this.searchElement.querySelector(".Search__Results"), this.queryMap = {}, this.isOpen = !1, this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners()
+                _classCallCheck(this, e), this.documentDelegate = $(document).delegate(document.body), this.searchElement = document.getElementById("Search"), this.searchInputElement = this.searchElement.querySelector('[name="q"]'), this.searchResultsElement = this.searchElement.querySelector(".Search__Results"), this.queryMap = {}, this.isOpen = !1, this.pageOverlayElement = document.querySelector(".PageOverlay"), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "destroy",
@@ -1920,7 +1919,7 @@ function _classCallCheck(e, t) {
         a = i(20),
         o = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.documentDelegate = new domDelegate.Delegate(document.documentElement), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.itemCount = this.options.itemCount, this.isCartNoteOpen = !1, this.options.drawer && (this.sidebarDrawer = new n.default(this.element, {
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.documentDelegate = $(document).delegate(document.documentElement), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.itemCount = this.options.itemCount, this.isCartNoteOpen = !1, this.options.drawer && (this.sidebarDrawer = new n.default(this.element, {
                     onClose: this._onDrawerClosed.bind(this)
                 })), this.options.hasShippingEstimator && (this.shippingEstimator = new a.default(this.element.querySelector(".ShippingEstimator"))), this._attachListeners()
             }
@@ -2133,7 +2132,7 @@ function _classCallCheck(e, t) {
         l = i(13),
         c = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.toolbarElement = this.element.querySelector(".CollectionToolbar"), this.collectionInnerElement = this.element.querySelector(".CollectionInner__Products"), this.settings = JSON.parse(this.element.getAttribute("data-section-settings")), this.currentTags = this.settings.currentTags, this.currentSortBy = this.settings.sortBy, this.temporaryTags = this.currentTags.slice();
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.toolbarElement = this.element.querySelector(".CollectionToolbar"), this.collectionInnerElement = this.element.querySelector(".CollectionInner__Products"), this.settings = JSON.parse(this.element.getAttribute("data-section-settings")), this.currentTags = this.settings.currentTags, this.currentSortBy = this.settings.sortBy, this.temporaryTags = this.currentTags.slice();
                 var i = document.getElementById("collection-sort-popover");
                 i && (this.sortPopover = new s.default(i, {
                     onValueChanged: this._sortByChanged.bind(this)
@@ -2317,7 +2316,7 @@ function _classCallCheck(e, t) {
         s = i(0),
         a = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "onUnload",
@@ -2382,7 +2381,7 @@ function _classCallCheck(e, t) {
         r = function() {
             function e(t) {
                 var i = this;
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-settings")), this.carousels = [], a.default.nodeListToArray(this.element.querySelectorAll("[data-flickity-config]")).forEach(function(e) {
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-settings")), this.carousels = [], a.default.nodeListToArray(this.element.querySelectorAll("[data-flickity-config]")).forEach(function(e) {
                     i.carousels.push(new n.default(e))
                 }), new s.default(this.element), this._setupAnimation(), this._attachListeners()
             }
@@ -2468,7 +2467,7 @@ function _classCallCheck(e, t) {
         s = i(10),
         a = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.options.usePlaceholder || "coming-soon" === this.options.templateSuffix || (this.productVariants = new n.default(t, this.options));
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.options.usePlaceholder || "coming-soon" === this.options.templateSuffix || (this.productVariants = new n.default(t, this.options));
                 var i = this.element.querySelector(".Product__OffScreen");
                 i && this.element.appendChild(i), this._attachListeners()
             }
@@ -2570,7 +2569,7 @@ function _classCallCheck(e, t) {
         r = function() {
             function e(t) {
                 var i = this;
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.lastScrollPosition = -1, this.isTouch = window.matchMedia("(-moz-touch-enabled: 1), (hover: none)").matches, this.options.isSticky && Stickyfill.addOne(this.element.parentNode), this.searchBar = new o.SearchBar, this._attachListeners(), this._verifyNavigationOverlap();
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.lastScrollPosition = -1, this.isTouch = window.matchMedia("(-moz-touch-enabled: 1), (hover: none)").matches, this.options.isSticky && Stickyfill.addOne(this.element.parentNode), this.searchBar = new o.SearchBar, this._attachListeners(), this._verifyNavigationOverlap();
                 var n = this.element.querySelector(".Header__LogoImage--primary");
                 n && !n.complete ? n.addEventListener("load", function() {
                     fastdom.measure(function() {
@@ -2773,7 +2772,7 @@ function _classCallCheck(e, t) {
     });
     var n = function() {
         function e(t) {
-            _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.timelineLite = new TimelineLite, this.customerLoginForm = this.element.querySelector("#customer_login"), this.recoverPasswordForm = this.element.querySelector("#recover_customer_password"), this.delegateElement.on("click", '[data-action="toggle-recover-form"]', this._showRecoverPassword.bind(this))
+            _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.timelineLite = new TimelineLite, this.customerLoginForm = this.element.querySelector("#customer_login"), this.recoverPasswordForm = this.element.querySelector("#recover_customer_password"), this.delegateElement.on("click", '[data-action="toggle-recover-form"]', this._showRecoverPassword.bind(this))
         }
         return _createClass(e, [{
             key: "_showRecoverPassword",
@@ -2886,7 +2885,7 @@ function _classCallCheck(e, t) {
     });
     var n = function() {
         function e(t) {
-            _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.options = JSON.parse(t.getAttribute("data-section-settings"));
+            _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.options = JSON.parse(t.getAttribute("data-section-settings"));
             try {
                 "#newsletter-popup" === window.location.hash && null !== window.theme.pageType ? this._openPopup() : (!this.options.showOnlyOnce || this.options.showOnlyOnce && null === localStorage.getItem("themePopup")) && setTimeout(this._openPopup.bind(this), 1e3 * this.options.apparitionDelay)
             } catch (e) {}
@@ -2979,7 +2978,7 @@ function _classCallCheck(e, t) {
         p = function() {
             function e(t) {
                 var i = this;
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.viewInSpaceElement = this.element.querySelector("[data-shopify-xr]"), "coming-soon" !== this.options.templateSuffix && (this.productVariants = new a.default(t, this.options)), this.productReviews = new r.default(t);
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.options = JSON.parse(this.element.getAttribute("data-section-settings")), this.viewInSpaceElement = this.element.querySelector("[data-shopify-xr]"), "coming-soon" !== this.options.templateSuffix && (this.productVariants = new a.default(t, this.options)), this.productReviews = new r.default(t);
                 var c = this.element.querySelector(".Product__Slideshow");
                 c && (this.productSlideshow = new n.default(c, {
                     onSelect: this._onImageChanged.bind(this),
@@ -3009,7 +3008,7 @@ function _classCallCheck(e, t) {
                 value: function() {
                     var e = this;
                     if (this.slideshowMobileNav = this.element.querySelector(".Product__SlideshowMobileNav"), this.slideshowMobileNav) {
-                        var t = new domDelegate.Delegate(this.slideshowMobileNav);
+                        var t = $(document).delegate(this.slideshowMobileNav);
                         t.on("click", ".dot", function(t, i) {
                             e._slideWillChange(), e.productSlideshow.selectCell(parseInt(i.getAttribute("data-index")))
                         }), t.on("click", ".Product__SlideshowNavArrow", function(t, i) {
@@ -3214,7 +3213,7 @@ function _classCallCheck(e, t) {
     var n = i(0),
         s = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this._setupAnimation()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this._setupAnimation()
             }
             return _createClass(e, [{
                 key: "onUnload",
@@ -3376,7 +3375,7 @@ function _classCallCheck(e, t) {
         o = i(1),
         r = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.usePocketMode = o.default.matchesBreakpoint("pocket"), this.pocketActivatorButton = this.element.querySelector('[data-action="open-look"]'), this._createOuterCarousel(), this._createPocketPopovers(), this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.usePocketMode = o.default.matchesBreakpoint("pocket"), this.pocketActivatorButton = this.element.querySelector('[data-action="open-look"]'), this._createOuterCarousel(), this._createPocketPopovers(), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "onUnload",
@@ -3541,7 +3540,7 @@ function _classCallCheck(e, t) {
         a = i(1),
         o = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.slideshow = new n.default(this.element.querySelector("[data-flickity-config]"), {
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.slideshow = new n.default(this.element.querySelector("[data-flickity-config]"), {
                     onSelect: this._onSlideChanged.bind(this)
                 }), this.selectedSlide = null, this.shouldAnimate = !0, this.timeline = new TimelineLite({
                     delay: window.theme.showPageTransition ? .5 : 0
@@ -3687,7 +3686,7 @@ function _classCallCheck(e, t) {
         s = i(0),
         a = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.navItems = s.default.nodeListToArray(this.element.querySelectorAll(".TestimonialNav__Item")), this.carousel = new n.default(this.element.querySelector(".TestimonialList"), {
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.navItems = s.default.nodeListToArray(this.element.querySelectorAll(".TestimonialNav__Item")), this.carousel = new n.default(this.element.querySelector(".TestimonialList"), {
                     onSelect: this._testimonialChanged.bind(this)
                 }), this._attachListeners()
             }
@@ -3734,7 +3733,7 @@ function _classCallCheck(e, t) {
     var n = i(0),
         s = function() {
             function e(t) {
-                _classCallCheck(this, e), this.element = t, this.delegateElement = new domDelegate.Delegate(this.element), this.items = n.default.nodeListToArray(this.element.querySelectorAll(".Timeline__Item")), this.navItems = n.default.nodeListToArray(this.element.querySelectorAll(".Timeline__NavItem")), this._attachListeners()
+                _classCallCheck(this, e), this.element = t, this.delegateElement = $(document).delegate(this.element), this.items = n.default.nodeListToArray(this.element.querySelectorAll(".Timeline__Item")), this.navItems = n.default.nodeListToArray(this.element.querySelectorAll(".Timeline__NavItem")), this._attachListeners()
             }
             return _createClass(e, [{
                 key: "onUnload",
@@ -3933,7 +3932,7 @@ function _classCallCheck(e, t) {
                 e.outerHTML = '<div class="TableWrapper">' + e.outerHTML + "</div>"
             }), s.DomHelper.nodeListToArray(document.querySelectorAll(".Rte iframe")).forEach(function(e) {
                 -1 === e.src.indexOf("youtube") && -1 === e.src.indexOf("youtu.be") && -1 === e.src.indexOf("vimeo") || (e.outerHTML = '<div class="VideoWrapper">' + e.outerHTML + "</div>", e.src = e.src)
-            }), o = new domDelegate.Delegate(document.body), r = document.querySelector(".AnnouncementBar"), o.on("click", '[href^="#"], [data-href]', function(e, t) {
+            }), o = $(document).delegate(document.body), r = document.querySelector(".AnnouncementBar"), o.on("click", '[href^="#"], [data-href]', function(e, t) {
                 var i = t.hasAttribute("href") ? t.getAttribute("href") : t.getAttribute("data-href");
                 if ("#" !== i) {
                     var n = document.querySelector(i),
