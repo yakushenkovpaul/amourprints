@@ -1,0 +1,131 @@
+<div class="cart-upsell cart-upsell-alternative">
+    <div id="rebuy-widget-240" class="rebuy-widget widget-type-cart widget-display-embed is-visible">
+        <div class="rebuy-widget-container widget-display-embed is-visible">
+            <div class="rebuy-widget-content">
+                <div class="rebuy-modal-close"><i class="fas fa-times"></i></div>
+                <!---->
+                <h3 class="primary-title">Premium Upgrades</h3>
+                <!---->
+                <div class="rebuy-product-grid large-style-line large-columns-1 medium-style-line medium-columns-1 small-style-line small-columns-1">
+                    <div class="rebuy-product-block gallery-wrap-1-5-upgrade product-id-4806190694480 cart-has-item tag-exempt tag-nocustomize">
+                        <div class="rebuy-product-media"><a onclick="addVariantReload(32895854215248)"  class="rebuy-product-image"><img src="https://cdn.shopify.com/s/files/1/1670/8157/products/gallery-wrap-15-thicker-canvas-upgrade-592588_550x.jpg" alt="Gallery Wrap 1.5” Thicker Canvas Upgrade"></a></div>
+                        <div class="rebuy-product-info"><a onclick="addVariantReload(32895854215248)"  class="rebuy-product-title">Gallery Wrap 1.5” Thicker Canvas Upgrade</a>
+                            <!---->
+                            <!---->
+                            <div class="rebuy-product-price">
+                                <div><span class="rebuy-money sale"><span class="money">$15.00</span></span> <span class="rebuy-money compare-at"><span class="money">$30.00</span></span></div>
+                                <!---->
+                            </div>
+                            <!---->
+                        </div>
+                        <!---->
+                        <div class="rebuy-product-actions">
+                            <!---->
+                            <!---->
+                            <!----> <button type="button" onclick="addVariantReload(32895854215248,this)" class="rebuy-button"><span>Add</span></button>
+                        </div>
+                    </div>
+                    <div class="rebuy-product-block add-a-black-frame-to-your-canvas product-id-4492971278416 tag-exempt tag-nocustomize">
+                        <div class="rebuy-product-media"><a onclick="addVariantReload(32011014209616)"  class="rebuy-product-image"><img src="https://cdn.shopify.com/s/files/1/1670/8157/products/luxury-black-floater-frame-canvas-upgrade-795257_1100x.jpg" alt="Luxury Black Floater Frame Canvas Upgrade"></a></div>
+                        <div class="rebuy-product-info"><a onclick="addVariantReload(32011014209616)"  class="rebuy-product-title">Luxury Black Floater Frame Canvas Upgrade</a>
+                            <!---->
+                            <!---->
+                            <div class="rebuy-product-price">
+                                <div><span class="rebuy-money sale"><span class="money">$40.00</span></span> <span class="rebuy-money compare-at"><span class="money">$99.00</span></span></div>
+                                <!---->
+                            </div>
+                            <!---->
+                        </div>
+                        <!---->
+                        <div class="rebuy-product-actions">
+                            <!---->
+                            <!---->
+                            <!----> <button type="button" onclick="addVariantReload(32011014209616,this)" class="rebuy-button"><span>Add</span></button>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="powered-by-rebuy"><a href="https://rebuyengine.com/?shop=amourprints.myshopify.com" target="_blank" rel="noopener">
+                        Powered by Rebuy
+                    </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+div#shopify-section-template--14184298741840__cart-upsell {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+}
+  .cart-upsell .rebuy-product-block {
+    width: 33% !important;
+    display: inline-block;
+    padding: 20px !important;
+}
+    .cart-upsell .rebuy-product-grid {
+    display: flex !important;
+}
+  .cart-upsell .rebuy-product-block .rebuy-product-media {
+    width: 100% !important;
+    display: block;
+    text-align: center !important;
+}
+.cart-upsell .rebuy-product-block .rebuy-product-media img {
+    margin: 0 auto !important;
+}
+  .cart-upsell .rebuy-product-block .rebuy-product-info {
+    width: 100% !important;
+    text-align: center !important;
+}
+  .cart-upsell .rebuy-product-block .rebuy-product-actions {
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    max-width: 100% !important;
+}
+  @media(max-width:740px){
+    .cart-upsell .rebuy-product-block {
+    width: 100% !important;
+}
+  }
+  
+  
+  .rebuy-product-actions button:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+</style>
+
+
+<script>
+  function addVariantReload(variantId, e) {
+    e.textContent = "Adding..."
+    data = {
+      "id": variantId,
+      "quantity": 1,
+      "properties": {
+        "_attribution": "Rebuy Cart",
+		"_source": "Rebuy",
+		"_widget_id": "240"
+      }
+    }
+    jQuery.ajax({
+      type: 'POST',
+      url: '/cart/add.js',
+      data: data,
+      dataType: 'json',
+      success: function() {
+        e.textContent = "Added!"
+        setTimeout(function(){
+            window.location.replace('https://amourprints.com/cart');
+        },1000)
+      }
+    });
+  }
+
+</script>
+

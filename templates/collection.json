@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "1629366709a3107652": {
+      "type": "image-banner",
+      "blocks": {
+        "18b1c5c2-8aa7-4731-a861-a2509e776356": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalized Canvas wall art"
+          }
+        },
+        "78e8c2ff-955d-4d04-b44e-54336f388e9e": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "24 Hour Flash Sale Up to 50% Off Sitewide"
+          }
+        }
+      },
+      "block_order": [
+        "18b1c5c2-8aa7-4731-a861-a2509e776356",
+        "78e8c2ff-955d-4d04-b44e-54336f388e9e"
+      ],
+      "settings": {
+        "image_2": "shopify:\/\/shop_images\/Trimmed_2_light_2_1.jpg",
+        "desktop_text_box_position": "flex-start",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": true
+      }
+    },
+    "cstm-menu": {
+      "type": "cstm_menu_collection",
+      "settings": {
+        "cstm_menu": "collection-menu"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 6,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false,
+        "enable_filtering": false,
+        "enable_sorting": false
+      }
+    },
+    "16295399131024e50d": {
+      "type": "cstm_common_section",
+      "blocks": {
+        "16295399131024e50d-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_world_1937837_000000_2x_e1761890-e6ac-43d9-90c7-dde4907adc92.png",
+            "title": "Free shipping worldwide",
+            "text": ""
+          }
+        },
+        "16295399131024e50d-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_quality_652198_000000_2x_3dfb945c-8159-4096-9541-7babd9d9bbc8.png",
+            "title": "Lifetime Warranty",
+            "text": ""
+          }
+        },
+        "16295399131024e50d-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_donate_3147033_000000_2x_edefa68f-e0c7-4130-82c8-d049e1411207.png",
+            "title": "10% profits donated to World Vision relief fund",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16295399131024e50d-0",
+        "16295399131024e50d-1",
+        "16295399131024e50d-2"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
+    },
+    "1633550545516a010b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "1629366709a3107652",
+    "cstm-menu",
+    "banner",
+    "product-grid",
+    "16295399131024e50d",
+    "1633550545516a010b"
+  ]
+}

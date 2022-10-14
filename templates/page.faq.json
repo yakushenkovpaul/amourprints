@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "page_faq",
+      "disabled": true,
+      "settings": {}
+    },
+    "16399456900e5eb55e": {
+      "type": "faq",
+      "blocks": {
+        "163994569047d37818-0": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {
+            "title": ""
+          }
+        },
+        "163994569047d37818-1": {
+          "type": "question",
+          "settings": {
+            "title": "What is the canvas made of?",
+            "answer": "<p>Each canvas is made with choice poly-cotton canvas. Includes Lifetime UV protection to stay vibrant. Solid wood backing.<\/p>"
+          }
+        },
+        "163994569047d37818-2": {
+          "type": "question",
+          "settings": {
+            "title": "Do you have my song?",
+            "answer": "<p>Yes! We can do any song. Just let us know what song you want and we can do the rest.<\/p>"
+          }
+        },
+        "1b97f34a-2d63-4c02-92bb-0ae77f8630e1": {
+          "type": "question",
+          "settings": {
+            "title": "How do I order?",
+            "answer": "<p>Select the size and quantity of canvas and any customizations and we will do the rest! We will send a preview within 3-4 business days to get your approval before production\/shipment.<\/p>"
+          }
+        },
+        "91fddbab-69df-4acd-a31d-ab9435b405ab": {
+          "type": "question",
+          "settings": {
+            "title": "What is the best size for me?",
+            "answer": "<p>Our most popular size is the 24x48''. We do recommend measuring the space where you want the canvas to be hung.<\/p>"
+          }
+        },
+        "3324c932-95b5-448a-9dce-abae811f1e9e": {
+          "type": "question",
+          "settings": {
+            "title": "What is the turnaound time?",
+            "answer": "<p>Short answer with standard shipping 5-9 business days. Priority shipping 2-5 business days. The sooner the proof is approve the faster we can get it out.<\/p>"
+          }
+        },
+        "b663f50f-f1e8-42ac-8f89-87fdafc56d2e": {
+          "type": "question",
+          "settings": {
+            "title": "Does the canvas arrive ready to hang?",
+            "answer": "<p>Yes, it arrives ready to hang with a wooden backing. All you need to do is decide where to hang your new canvas.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "163994569047d37818-0",
+        "163994569047d37818-1",
+        "163994569047d37818-2",
+        "1b97f34a-2d63-4c02-92bb-0ae77f8630e1",
+        "91fddbab-69df-4acd-a31d-ab9435b405ab",
+        "3324c932-95b5-448a-9dce-abae811f1e9e",
+        "b663f50f-f1e8-42ac-8f89-87fdafc56d2e"
+      ],
+      "settings": {
+        "expand_questions": false
+      }
+    },
+    "1631095635637b1a72": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Discover the Perfect Gift",
+        "collection": "anniversary",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16399456900e5eb55e",
+    "1631095635637b1a72"
+  ]
+}

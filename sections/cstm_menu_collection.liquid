@@ -1,0 +1,25 @@
+
+<div class="menu_collection ">
+  <div class="collection-hero__inner page-width">
+    <div class="collection-hero__text-wrapper cstm_menu_css">
+        {% for link in section.settings.cstm_menu.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Menu",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    	{
+      "type": "link_list",
+      "id": "cstm_menu",
+      "label": "Select Menu"
+    }
+  ]
+}
+{% endschema %}

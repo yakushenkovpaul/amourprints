@@ -1,0 +1,77 @@
+<div class="product_page_delivery_order">
+  <div class="product_delivery_order">
+  	<img src="https://cdn.shopify.com/s/files/1/1670/8157/files/T.jpg?v=1632996997">
+    <h3>Fastest Delivery: <span id="fromDate"></span> </h3>
+<!--       - <span id="toDate"></span> -->
+  </div>
+   
+</div>
+
+
+{{ '//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js' | script_tag }}
+<script>
+var fromDate = Date.today().addDays(4);
+if (fromDate.is().saturday() || fromDate.is().sunday()) {
+fromDate = fromDate.next().monday();
+}
+var toDate = Date.today().addDays(8);
+if (toDate.is().saturday() || toDate.is().sunday()) {
+toDate = toDate.next().monday();
+}
+document.getElementById('fromDate').innerHTML = fromDate.toString('dddd MMMM dS');
+document.getElementById('toDate').innerHTML = toDate.toString('dddd MMMM dS');
+</script>
+  
+  
+<style>
+.product_delivery_order {
+    display: flex;
+    align-items: center;
+}
+
+.product_delivery_order h3 {
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.product_delivery_order h3 span {
+    color: #373e46;
+}
+
+.product_delivery_order img {
+    width: auto;
+    height: 23px;
+    object-fit: contain;
+    object-position: left;
+  padding-right: 10px;
+}
+</style>
+
+
+
+
+<div class="product_delivery_order">
+  	<img src="https://cdn.shopify.com/s/files/1/1670/8157/files/HG.jpg?v=1632996997">
+     <h3>Order within <span class="timer-block__num js-timer-hours">0</span>h <span class="timer-block__num js-timer-minutes">0</span>m <span class="timer-block__num js-timer-seconds">0</span>s</h3>
+</div>
+     <span class="timer-block__num js-timer-days" style="display:none;">0</span>
+     <span class="timer-block__num js-timer-minutes" style="display:none;">0</span>
+     <span class="timer-block__num js-timer-seconds" style="display:none;">0</span>
+<script type="text/javascript">
+  var second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+  
+  var countDown = new Date().getTime() + 5700000,
+      x = setInterval(function() {
+      var now = new Date().getTime(),
+          distance = countDown - now;
+      document.querySelector('.js-timer-days').innerText = Math.floor(distance / (day)),
+        document.querySelector('.js-timer-hours').innerText = Math.floor((distance % (day)) / (hour)),
+      document.querySelector('.js-timer-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+      document.querySelector('.js-timer-seconds').innerText = Math.floor((distance % (minute)) / second);
+    }, second)
+    console.log(countDown);
+</script>

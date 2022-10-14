@@ -1,0 +1,35 @@
+{% if product.tags contains 'custom_field' %}
+<div class="product_extra_data">
+ <fieldset class="js product-form__input">
+      <legend class="form__label">Customize your canvas:</legend><input type="radio" id="template--14805938045098__main-Select Your Size: 10” X 20”-0" name="Select Your Size: 10” X 20”" value="10” X 20”" form="product-form-template--14805938045098__main" checked="">
+ </fieldset>
+  <div class="custom_pro_fields">
+    {% if product.handle == 'custom-couple-spotify-music-canvas' %}
+     <div class="custom_pro_fields1">
+       <div class="custom_pro_fields11">
+         <p class="line-item-property__field">
+            <input id="your-names" type="text" name="properties[Your name(s)]" placeholder="Your name(s):">
+          </p>
+       </div>
+       <div class="custom_pro_fields12">
+         <p class="line-item-property__field">
+            <input id="date" type="text" name="properties[Date]" placeholder="Date">
+          </p>
+       </div>
+    </div>
+     <div class="custom_pro_fields2">
+       <p class="line-item-property__field">
+        <textarea id="your-song-choose-any-song" name="properties[Your Song: (Choose any song!)]" placeholder="Your Song: (Choose any song!)"></textarea>
+      </p>
+    </div>
+    {% endif %}
+     {% if product.handle == 'custom-couple-spotify-music-canvas-1' %}
+    	<div class="custom_pro_fields2">
+       <p class="line-item-property__field">
+        <textarea id="number_of_names" name="properties[Number Of Names]" placeholder="Number Of Names"></textarea>
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

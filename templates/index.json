@@ -1,0 +1,716 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalized Canvas Wall art"
+          }
+        },
+        "c8eea5c4-a8df-4d11-b21d-95819aef39d6": {
+          "type": "text",
+          "settings": {
+            "text": "Turn your favorite song lyrics into a stunning, high quality custom canvas! Personalized canvas designs for everyone to love."
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "https:\/\/amourprints.com\/collections\/canvas-prints",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "c8eea5c4-a8df-4d11-b21d-95819aef39d6",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/NewPhotoDesktop.jpg",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "16398501492cb26726": {
+      "type": "shop-by-collections",
+      "blocks": {
+        "16398501499cb815d9-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "canvas-prints",
+            "collection_title": "BESTSELLERS",
+            "collection_image": "shopify:\/\/shop_images\/best.jpg"
+          }
+        },
+        "16398501499cb815d9-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "couples-canvases",
+            "collection_title": "WEDDING",
+            "collection_image": "shopify:\/\/shop_images\/c.jpg"
+          }
+        },
+        "fad4cb67-6538-42c3-94bb-e2daa7010e29": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "anniversary",
+            "collection_title": "SUMMER LOVE",
+            "collection_image": "shopify:\/\/shop_images\/capture_your_favorite_memories-valentines_day-amourprints-valentines_day_35cda304-327f-4821-8b8a-fb731c6f6952.png"
+          }
+        },
+        "16398501499cb815d9-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "family-name-canvases",
+            "collection_title": "FAMILY",
+            "collection_image": "shopify:\/\/shop_images\/fathers_day-military_dad-best_gift_720x_c6cbc596-7da3-4d25-b9a8-3c83b29859e4.jpg"
+          }
+        },
+        "7568f6df-60bb-4cb5-9ba2-8ad770b616e4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "music",
+            "collection_title": "MUSIC",
+            "collection_image": "shopify:\/\/shop_images\/image_720x_557436d8-72f7-4c9f-a737-dd756fd62099.jpg"
+          }
+        },
+        "7a89600d-f970-4f72-b769-d506b5f888bc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "illustration",
+            "collection_title": "ILLUSTRATION",
+            "collection_image": "shopify:\/\/shop_images\/family_personalized_gift.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "16398501499cb815d9-0",
+        "16398501499cb815d9-1",
+        "fad4cb67-6538-42c3-94bb-e2daa7010e29",
+        "16398501499cb815d9-2",
+        "7568f6df-60bb-4cb5-9ba2-8ad770b616e4",
+        "7a89600d-f970-4f72-b769-d506b5f888bc"
+      ],
+      "settings": {
+        "title": "",
+        "image_ratio": "circle",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": true,
+        "image_padding": false,
+        "show_view_all": false
+      }
+    },
+    "1634726672f7d318ed": {
+      "type": "multicolumn-2",
+      "blocks": {
+        "1634726672f7d318ed-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_canvas_567697_000000_2x_6161b418-2e88-4164-aa09-22b335587c54.png",
+            "title": "1. Select & Customize Your Canvas",
+            "text": "<p>Discover unique, customizable canvas prints featuring the lyrics to your favorite song!<\/p>"
+          }
+        },
+        "1634726672f7d318ed-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_hearth_3267703_000000_2x_eec08a28-d6e9-4cfe-948e-8a1743b5482f.png",
+            "title": "2. We’ll Send a Preview",
+            "text": "<p>(24-48 hours) before we ship to ensure complete satisfaction.<\/p>"
+          }
+        },
+        "1634726672f7d318ed-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_gift_939092_000000_2x_291a8e0f-8329-4a0f-8186-63858cc8ae9e.png",
+            "title": "3. Enjoy Your Memento!",
+            "text": "<p>Upon approval, we send it to production and then ship your order!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1634726672f7d318ed-0",
+        "1634726672f7d318ed-1",
+        "1634726672f7d318ed-2"
+      ],
+      "settings": {
+        "title": "How To Get Started:",
+        "title2": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Shop Now",
+        "button_link": "shopify:\/\/collections\/canvas-prints",
+        "swipe_on_mobile": true
+      }
+    },
+    "162798706229fbdbfb": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "162798706229fbdbfb-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_canvas_567697_000000_2x_550x_03c03b34-1fb6-4fd0-acb2-6858f6a291e4.png",
+            "title": "1. Customize Your Canvas",
+            "text": "<p>Discover specially customized art print including the lyrics to your couple song<br\/><br\/><\/p>"
+          }
+        },
+        "162798706229fbdbfb-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_hearth_3267703_000000_2x_550x_662bfe88-4688-45b6-abcc-d2b9f5197575.png",
+            "title": "2. We’ll Send a Proof",
+            "text": "<p>(24-48 hours) before we ship to ensure complete satisfaction.<br\/><br\/><\/p>"
+          }
+        },
+        "162798706229fbdbfb-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_gift_939092_000000_2x_550x_1000125a-e4e8-422f-a77f-1a7d98470b74.png",
+            "title": "3. Enjoy Your Memento!",
+            "text": "<p>Upon approval, we send it to production and then ship your order!<br\/><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "162798706229fbdbfb-0",
+        "162798706229fbdbfb-1",
+        "162798706229fbdbfb-2"
+      ],
+      "settings": {
+        "title": "How To Get Your Specially",
+        "title2": "Customized Art Print in 3 Steps",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Shop Now",
+        "button_link": "shopify:\/\/collections\/canvas-prints",
+        "swipe_on_mobile": false
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Discover The Perfect Gift",
+        "collection": "canvas-prints",
+        "products_to_show": 12,
+        "show_view_all": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false
+      }
+    },
+    "1628063476a9d3a4a3": {
+      "type": "logo-list",
+      "blocks": {
+        "1628063476a9d3a4a3-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_diamond_1830604_000000_2x_25c5ce3a-8e5c-41a2-b838-c4ff078dcc0e.png",
+            "title": "",
+            "text": "<p>100% HIGH QUALITY<\/p>"
+          }
+        },
+        "1628063476a9d3a4a3-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_usa_3866803_000000_2x_9548a93a-cf42-4f53-93c0-31a253870cbc.png",
+            "title": "",
+            "text": "<p>MADE IN USA<\/p>"
+          }
+        },
+        "1628063476a9d3a4a3-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_help_3520535_000000_2x_57363cf6-5823-424b-90c8-b5c3d5882231.png",
+            "title": "",
+            "text": "<p>24\/7 CUSTOMER SUPPORT<\/p>"
+          }
+        },
+        "33328e1b-2997-4d16-9e5f-cc6a47564da9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_returns_3786355_000000_2x_34827590-fb9e-4375-9c00-b34883143975.png",
+            "title": "",
+            "text": "<p>90 DAY FREE RETURNS<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1628063476a9d3a4a3-0",
+        "1628063476a9d3a4a3-1",
+        "1628063476a9d3a4a3-2",
+        "33328e1b-2997-4d16-9e5f-cc6a47564da9"
+      ],
+      "settings": {
+        "title": "The Top-Rated Online Gallery",
+        "subtitle": "Find the best match for your walls",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "163256249850f1f168": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div id=\"stamped-main-widget\"><\/div>"
+      }
+    },
+    "1629185693566679f9": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Amour_UI_1100x_92f86878-2fa5-44a5-a92e-ffbdc8822a9f.png",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "1628862415e588a165": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "1628862415e588a165-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bundle & save 10%"
+          }
+        },
+        "1628862415e588a165-1": {
+          "type": "text",
+          "settings": {
+            "text": "Purchase two or more canvases and save 10% or purchase any canvas with a frame or upgrade and save."
+          }
+        },
+        "1628862415e588a165-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get Started",
+            "button_link_1": "\/pages\/bundles",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1628862415e588a165-0",
+        "1628862415e588a165-1",
+        "1628862415e588a165-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_5568_1100x_faa944ca-90ec-4597-9bd9-9e7545e86577.png",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "1634746225c4df8723": {
+      "type": "home-bundle-section",
+      "blocks": {
+        "1634746225c4df8723-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "BUNDLE & SAVE 10%"
+          }
+        },
+        "1634746225c4df8723-1": {
+          "type": "text",
+          "settings": {
+            "text": "Purchase two or more canvases and save 10% or purchase any canvas with a frame or upgrade and save."
+          }
+        },
+        "1634746225c4df8723-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/canvas-prints",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "1634746225c4df8723-0",
+        "1634746225c4df8723-1",
+        "1634746225c4df8723-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_5568_1100x_faa944ca-90ec-4597-9bd9-9e7545e86577.png",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "image_text": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Museum Quality"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>State of the art technology for printing. <\/p><p>Choice poly-cotton canvas. <\/p><p>Lifetime UV protection to stay vibrant.<\/p><p>Solid wood backing.<\/p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "\/products\/song-lyrics-canvas-custom-art-print-wedding-name"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/larka_1000x_a20e4b2d-9c89-46a4-b5e2-76661ca7dc8d.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first"
+      }
+    },
+    "16279952630cc4025b": {
+      "type": "image-with-text",
+      "blocks": {
+        "16279952630cc4025b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Gift For Anyone"
+          }
+        },
+        "16279952630cc4025b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is always that special song that takes you back to a sea of memories. Relive your memories and let us create a personalized canvas just for you.<\/p>"
+          }
+        },
+        "16279952630cc4025b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "\/products\/song-lyrics-canvas-custom-art-print-wedding-name"
+          }
+        }
+      },
+      "block_order": [
+        "16279952630cc4025b-0",
+        "16279952630cc4025b-1",
+        "16279952630cc4025b-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/age-people-concept-senior-couple-with-gift-box-lights-background-woman-white-knited-sweatre_1000x_5c758675-77b5-4871-8145-f654e1d8cdc9.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
+    },
+    "1629792275116b728c": {
+      "type": "cstm_common_section",
+      "blocks": {
+        "1629792275116b728c-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_world_1937837_000000_2x_e1761890-e6ac-43d9-90c7-dde4907adc92.png",
+            "title": "Free Shipping Worldwide",
+            "text": ""
+          }
+        },
+        "1629792275116b728c-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_quality_652198_000000_2x_3dfb945c-8159-4096-9541-7babd9d9bbc8.png",
+            "title": "Lifetime Warranty",
+            "text": ""
+          }
+        },
+        "1629792275116b728c-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_donate_3147033_000000_2x_edefa68f-e0c7-4130-82c8-d049e1411207.png",
+            "title": "10% Profits Donated to World Vision Relief Fund",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1629792275116b728c-0",
+        "1629792275116b728c-1",
+        "1629792275116b728c-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "subtitle": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "1629291967440e6643": {
+      "type": "cstm_testimonial",
+      "blocks": {
+        "1629291967440e6643-1": {
+          "type": "column",
+          "settings": {
+            "title": "Donna L.",
+            "title2": "Wedding song",
+            "text": "<p>I had our wedding song placed on our canvas. The service was professional and accomodating. Ie. In Australia we have date then month in date and that was changed for me. ( preview sent before item made). The canvas arrived safe, no damage, looks great above our bed and made my husband happy to receive such a personal gift.<\/p>"
+          }
+        },
+        "1629291967440e6643-2": {
+          "type": "column",
+          "settings": {
+            "title": "Scott E.",
+            "title2": "Perfect!!",
+            "text": "<p>Great service, great product. Exactly what we were looking for. Delivery was quick and customer service was exceptional. We love it!!<\/p>"
+          }
+        },
+        "2f33c04f-cc3d-4496-8f7f-688819550492": {
+          "type": "column",
+          "settings": {
+            "title": "Curtis B.",
+            "title2": "She loved it",
+            "text": "<p>Very happy with the canvas. My wife absolutely loved it and I enjoyed watching her open it. It was packaged very well and it was shipped very fast. I didn't receive a tracking number but it arrives quickly anyways. Will definitely buy another one in the near future.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1629291967440e6643-1",
+        "1629291967440e6643-2",
+        "2f33c04f-cc3d-4496-8f7f-688819550492"
+      ],
+      "settings": {
+        "image_width": "third",
+        "image_ratio": "square",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
+    },
+    "1628863854171c0633": {
+      "type": "logo-list",
+      "disabled": true,
+      "blocks": {
+        "1628863854171c0633-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/face.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1628863854171c0633-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_11.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "1628863854171c0633-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_13.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "752dc94f-7b0f-4f4c-b404-8d02ea9cde7f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_14.png",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1628863854171c0633-0",
+        "1628863854171c0633-1",
+        "1628863854171c0633-2",
+        "752dc94f-7b0f-4f4c-b404-8d02ea9cde7f"
+      ],
+      "settings": {
+        "title": "Featured On",
+        "subtitle": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "1643454441d8ed94d2": {
+      "type": "rich-text",
+      "blocks": {
+        "164345444107cad853-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "We’re All About Love",
+            "heading_size": "medium"
+          }
+        },
+        "164345444107cad853-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make love the centerpiece of your life — gift them something charming with lots of care, romance, and warmth.<\/p><p>Surprise your loved ones with romantic canvas art and song lyrics on canvas to show them the depth of your feelings. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164345444107cad853-0",
+        "164345444107cad853-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "1643454595759e57c8": {
+      "type": "rich-text",
+      "blocks": {
+        "164345459528a4b479-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Canvas Prints as a Perfect Gift",
+            "heading_size": "medium"
+          }
+        },
+        "164345459528a4b479-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Let go of words because the best gifts come from the bottom of the heart. Perfect gifts are creative and thoughtful, everything that our custom canvas prints represent.<\/p><p>Here’s to making memories that last a lifetime. Here’s to the beautiful moments that transform us forever. Here’s to love and remembrance. <\/p><p>Choose Amour Prints to order canvas prints online today.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164345459528a4b479-0",
+        "164345459528a4b479-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
+    "163475359874541917": {
+      "type": "home-featured-logo",
+      "blocks": {
+        "163475359874541917-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_12.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "163475359874541917-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_11.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "163475359874541917-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_13.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "978fc50d-d044-4c95-befb-81bf901c62c6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_14.png",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "163475359874541917-0",
+        "163475359874541917-1",
+        "163475359874541917-2",
+        "978fc50d-d044-4c95-befb-81bf901c62c6"
+      ],
+      "settings": {
+        "title": "Featured On",
+        "subtitle": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
+    },
+    "1633549006a43e21c7": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "16398501492cb26726",
+    "1634726672f7d318ed",
+    "162798706229fbdbfb",
+    "featured_products",
+    "1628063476a9d3a4a3",
+    "163256249850f1f168",
+    "1629185693566679f9",
+    "1628862415e588a165",
+    "1634746225c4df8723",
+    "image_text",
+    "16279952630cc4025b",
+    "1629792275116b728c",
+    "1629291967440e6643",
+    "1628863854171c0633",
+    "1643454441d8ed94d2",
+    "1643454595759e57c8",
+    "163475359874541917",
+    "1633549006a43e21c7"
+  ]
+}

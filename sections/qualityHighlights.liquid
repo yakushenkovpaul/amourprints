@@ -1,0 +1,77 @@
+ <div class="page-width">
+   <div class="qualityHighlights">
+     {%- for block in section.blocks -%}
+  <div class="box_quality">
+    {%- if block.settings.image != blank -%}
+      <div class="icon-wrapper">
+       <img src="{{ block.settings.image | img_url: '50x' }}">
+      </div>
+    {%- endif -%}
+    {%- if block.settings.title != blank -%}
+      <h6>{{ block.settings.title | escape }}</h6>
+    {%- endif -%}
+     {%- if block.settings.text != blank -%}
+       <div class="rte">{{ block.settings.text }}</div>
+    {%- endif -%}
+  </div>
+  {%- endfor -%}
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Quality Highlights",
+    "settings": [],
+	"blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Column",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quality Highlights",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+		{
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

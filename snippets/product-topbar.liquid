@@ -1,0 +1,42 @@
+{% if settings.activetopbar %}
+<div class="three-boxes">
+  <div class="page-width">
+    <div class="boxes-outer onlydektext">
+      {% if settings.firsttext %}
+		<div class="boxes-inner boxes-1">
+			<div class="box">
+				<div class="box-text">
+					<p>{{ settings.firsttext }}</p>
+				</div>
+			</div>
+        </div> 
+      {% endif %}
+      {% if settings.secondtext %}
+      	<div class="boxes-inner boxes-2">
+			<div class="box">
+				<div class="box-text">
+					<p>{{ settings.secondtext }}</p>
+				</div>
+			</div>
+        </div> 
+      {% endif %}
+      {% if settings.thirdtext %}
+    	  <div class="boxes-inner boxes-3">
+			<div class="box">
+				<div class="box-text">
+					<p>{{ settings.thirdtext }}</p>
+				</div>
+			</div>
+        </div> 
+      {% endif %}
+	</div>
+    <marquee class="onlymobtxt" direction="left">
+      <div class="boxes-outer">
+   	  <div class="box-text"><p>{{ settings.firsttext }}</p></div>
+      <div class="box-text"><p>{{ settings.secondtext }}</p></div>
+      <div class="box-text"><p>{{ settings.thirdtext }}</p></div>
+        </div> 
+    </marquee>
+</div> 
+  </div> 
+{% endif %}

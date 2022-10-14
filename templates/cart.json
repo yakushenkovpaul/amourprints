@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": false
+      }
+    },
+    "cart-upsell": {
+      "type": "main-cart-upsell",
+      "settings": {}
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "show_cart_note": false
+      }
+    },
+    "163134469292b4eebb": {
+      "type": "logo-list",
+      "blocks": {
+        "163134469292b4eebb-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_world_1937837_000000_2x_e1761890-e6ac-43d9-90c7-dde4907adc92.png",
+            "title": "Free Shipping Worldwide",
+            "text": ""
+          }
+        },
+        "163134469292b4eebb-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_returns_3786355_000000_2x_34827590-fb9e-4375-9c00-b34883143975.png",
+            "title": "Easy Returns",
+            "text": ""
+          }
+        },
+        "163134469292b4eebb-2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_donate_3147033_000000_2x_edefa68f-e0c7-4130-82c8-d049e1411207.png",
+            "title": "Fast Delivery",
+            "text": ""
+          }
+        },
+        "4a06828f-393c-42ad-9955-f99d50a09946": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_donate_3147033_000000_2x_edefa68f-e0c7-4130-82c8-d049e1411207.png",
+            "title": "Percentage Donated to World Vision ®",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "163134469292b4eebb-0",
+        "163134469292b4eebb-1",
+        "163134469292b4eebb-2",
+        "4a06828f-393c-42ad-9955-f99d50a09946"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-upsell",
+    "cart-footer",
+    "163134469292b4eebb"
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "current": {
+    "colors_accent_1": "#373e46",
+    "colors_accent_2": "#373e46",
+    "colors_text": "#373e46",
+    "colors_outline_button_labels": "#373e46",
+    "colors_background_2": "#f8f8f8",
+    "type_header_font": "sans-serif",
+    "type_body_font": "sans-serif",
+    "checkout_show_timer": false,
+    "checkout_free_shipping_discount_label": "You have won Free Rushed Shipping. <br>\nContinue through checkout to automatically receive your reward.",
+    "checkout_discount_threshold_label": "Flash Sale! You saved 65% off your order!",
+    "checkout_faq_title": "FAQ for Checkout",
+    "page": "faq",
+    "sale_badge_color_scheme": "accent-2",
+    "social_facebook_link": "https:\/\/www.facebook.com\/amourprints",
+    "social_instagram_link": "https:\/\/www.instagram.com\/amourprints\/",
+    "adesk_sticky_addtocart": true,
+    "adesk_sticky_addtocart_reviews": true,
+    "adesk_sticky_addtocart_mobile": true,
+    "adesk_sticky_addtocart_position": "bottom",
+    "fakesaleactive": true,
+    "discount_amount": "65",
+    "custombadge": false,
+    "badgeimg": "shopify:\/\/shop_images\/50percent.png",
+    "activetopbar": false,
+    "firsttext": "100% Money Back Guaranteed",
+    "secondtext": "10% profits donated to World Vision relief fund",
+    "thirdtext": "Lifetime Guarantee",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Copy_of_Copy_of_Amourprints_14_340ca549-80d5-4139-9973-c79de3ce1c7c.png",
+    "checkout_button_color": "#18b98e",
+    "checkout_page": "faqs",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "**FINAL DAY ** | $20 + 2-DAY WORLDWIDE SHIPPING ON ORDERS $150+ | CODE: 20LABOR",
+              "phone_number": "(760) 284-4605",
+              "phone-number-url": "",
+              "email": "support@amourprints.com",
+              "email-url": "mailto:support@amourprints.com",
+              "color_scheme": "accent-2",
+              "link": "",
+              "top_right_1": "MY ACCOUNT",
+              "top_right_url_1": "\/account",
+              "top_right_2": "TRACK ORDER",
+              "top_right_url_2": "\/apps\/trackingmore"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Copy_of_Copy_of_Amourprints_14_340ca549-80d5-4139-9973-c79de3ce1c7c.png",
+          "logo_width": 220,
+          "logo_position": "top-center",
+          "phone_number": "CALL US",
+          "phone-number-url": "tel:7602844605",
+          "menu": "new-main-menu-1",
+          "menu2": "new-main-menu-2",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "19a64e97-09f2-45a0-a17e-1189305c623f": {
+            "type": "text",
+            "settings": {
+              "heading": "Customer Care",
+              "subtext": "<p>Need help? We're here for you, and ready to answer your questions.<\/p>\n<div class=\"footeradd\">\n<p><a href=\"https:\/\/g.page\/amour-prints?share%20\" title=\"https:\/\/g.page\/amour-prints?share \"><i class=\"fa fa-map-marker\" aria-hidden=\"true\"><\/i> 9964 Svl Box,<br> Victorville, CA 92395<\/a><\/p>\n<p><a class=\"phones\" href=\"tel:7602844605\"><i class=\"fa fa-phone\" aria-hidden=\"true\"><\/i> (760) 284-4605 <\/a><\/p>\n<p><a href=\"mailto:support@amourprints.com\"><i class=\"fa fa-envelope-o\" aria-hidden=\"true\"><\/i> support@amourprints.com <\/a><\/p>\n<\/div>"
+            }
+          },
+          "bc3f57df-22d6-427f-906b-120862d9dfb3": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Product",
+              "menu": "products"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Support",
+              "menu": "support"
+            }
+          },
+          "0747f757-3c9a-4941-b4d8-d47721d5bd0f": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Company",
+              "menu": "company"
+            }
+          }
+        },
+        "block_order": [
+          "19a64e97-09f2-45a0-a17e-1189305c623f",
+          "bc3f57df-22d6-427f-906b-120862d9dfb3",
+          "footer-0",
+          "0747f757-3c9a-4941-b4d8-d47721d5bd0f"
+        ],
+        "settings": {
+          "color_scheme": "background-2",
+          "newsletter_enable": true,
+          "newsletter_heading": "",
+          "show_social": false,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      },
+      "custom-faq": {
+        "type": "custom-faq",
+        "blocks": {
+          "aabd6f75-c5b4-4678-981d-2b0f56ba6760": {
+            "type": "column",
+            "settings": {
+              "title": "Will you send a preview before shipping?",
+              "text": "Of course! We will send a preview before shipping to make sure you 100% LOVE IT. So make sure to check your emails."
+            }
+          },
+          "1efc365c-5dce-4357-a15f-445098f52afe": {
+            "type": "column",
+            "settings": {
+              "title": "Do you have my song?",
+              "text": "Yes! We can do any song. Just let us know what song you want and we can do the rest."
+            }
+          },
+          "d069d56e-bdeb-44f4-b75f-8da6a2aadada": {
+            "type": "column",
+            "settings": {
+              "title": "Do you offer refunds?",
+              "text": "Yes of course! If for any reason you don't 100% love your canvas we will refund your order."
+            }
+          },
+          "9da6594d-66fc-4692-9e96-be567e223629": {
+            "type": "column",
+            "settings": {
+              "title": "What is the best size for me?",
+              "text": "Our most popular size is the 24x48''. We do recommend measuring the space where you want the canvas to be hung."
+            }
+          },
+          "3c8184aa-9930-46f7-b0b2-33b2d82cf684": {
+            "type": "column",
+            "settings": {
+              "title": "What is the turnaound time?",
+              "text": "With standard shipping around 5-9 business days. Priority is around 3-5 business days."
+            }
+          },
+          "c0c94be1-7e2d-49ff-8e1e-ede2873914f4": {
+            "type": "column",
+            "settings": {
+              "title": "Does the canvas arrive ready to hang?",
+              "text": "Yes, it arrives ready to hang with a wooden backing. All you need to do is decide where to hang your new canvas."
+            }
+          }
+        },
+        "block_order": [
+          "aabd6f75-c5b4-4678-981d-2b0f56ba6760",
+          "1efc365c-5dce-4357-a15f-445098f52afe",
+          "d069d56e-bdeb-44f4-b75f-8da6a2aadada",
+          "9da6594d-66fc-4692-9e96-be567e223629",
+          "3c8184aa-9930-46f7-b0b2-33b2d82cf684",
+          "c0c94be1-7e2d-49ff-8e1e-ede2873914f4"
+        ],
+        "settings": {
+          "title": "Frequently asked questions"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "1513253815146976218": {
+        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "disabled": false,
+        "settings": {}
+      },
+      "7612553728132747764": {
+        "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/net-promoter-score-form-modal\/a103faaf-2125-4b0e-89fa-de5149736723",
+        "disabled": true,
+        "settings": {
+          "email": "",
+          "name": "",
+          "title": "",
+          "message": "Enable advanced features and increase your monthly order limit to match your business's needs.",
+          "reason": "",
+          "thank_you": "",
+          "label_name": "",
+          "label_email": ""
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": true,
+        "settings": {}
+      },
+      "1169919934575453974": {
+        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/referral-modal\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
+        "disabled": true,
+        "settings": {
+          "customer_email": "",
+          "customer_first_name": "",
+          "frequency": "once",
+          "background_image_url": "",
+          "style-color-background": "",
+          "style-color-button": "",
+          "style-color-link": "",
+          "subtitle": "",
+          "title": "",
+          "description": "",
+          "button_text": "",
+          "subtitle_two": "",
+          "text_disclaimer": "",
+          "text_share_manual": "",
+          "button_text_send": ""
+        }
+      },
+      "3868388246157625423": {
+        "type": "shopify:\/\/apps\/stamped-loyalty-referrals\/blocks\/rewards-launcher\/1dca3c9b-31b1-4bfb-a09a-c23c1a3c8fb6",
+        "disabled": true,
+        "settings": {}
+      },
+      "1575957009345749421": {
+        "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/side-drawer\/a103faaf-2125-4b0e-89fa-de5149736723",
+        "disabled": true,
+        "settings": {
+          "show_avatar": true,
+          "position": "left",
+          "text": "",
+          "title": "",
+          "link": "",
+          "link_text": "",
+          "background_color": "",
+          "style_color_button_text": "",
+          "style_color_star": "",
+          "style_color_text": "",
+          "style_color_link": "",
+          "review_ids": "",
+          "product_ids": "",
+          "category": "",
+          "product_brand": "",
+          "tags": "",
+          "min_rating": "none",
+          "fill_empty": false,
+          "random": false,
+          "with_photos": false
+        }
+      },
+      "4697538150380142411": {
+        "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/reviews-popup\/a103faaf-2125-4b0e-89fa-de5149736723",
+        "disabled": true,
+        "settings": {
+          "layout": "horizontal",
+          "effect": "slidetop",
+          "delay_seconds": 6,
+          "show_seconds": 10,
+          "pause_seconds": 10,
+          "position": "bottomleft",
+          "color_background": "",
+          "color_star": "",
+          "color_text": "",
+          "review_ids": "",
+          "product_ids": "",
+          "category": "",
+          "product_brand": "",
+          "tags": "",
+          "min_rating": "none",
+          "fill_empty": false,
+          "random": false,
+          "with_photos": false
+        }
+      },
+      "6143736321357441667": {
+        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
+        "disabled": true,
+        "settings": {}
+      }
+    }
+  }
+}

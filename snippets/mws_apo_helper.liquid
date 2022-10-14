@@ -1,0 +1,66 @@
+<script>
+  function mws_apo_hide_our_variants(selector_container, selector_items) {
+  const container = document.querySelectorAll(selector_container);
+  if (!container) {
+    return;
+  }
+  for (const i of container) {
+    const items = i.querySelectorAll(selector_items);
+    for (let item of items) {
+      if (item.textContent.indexOf("#MWS Options") >= 0) {
+        item.remove();
+      }
+    }
+    if (i.querySelectorAll(selector_items).length === 0) {
+      i.style.display = "none";
+    }
+  }
+}
+  
+window.mwApoInit.onEvent = function (event, args) {
+  if (event == "init::finish") {
+    mws_apo_hide_our_variants(
+      ".product-form__input",
+      "label"
+    );
+    
+ $('.hiddenName').val($('.hiddenInput').val())
+  	let titles = document.querySelectorAll('.product-form__input label');
+
+    if (titles) {
+      titles.forEach(element => {
+        element.addEventListener("click", (e) => {
+          setTimeout(function() {
+            $('.hiddenName').val($('.hiddenInput').val())
+            let evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            document.querySelector('.hiddenName').dispatchEvent(evt);       
+          }, 700)
+		})
+      });
+    }
+  }
+};
+window.mwApoInit.onCallback = function (event, data) {
+    return data;
+};
+window.mwApoInit.settings.selectors.product.gallery_container = '.custom_selector';
+</script>
+<style>
+  .filepond--panel[data-scalable=true] {
+    background-color: #f1f0ef !important;
+  }
+  .filepond--drop-label label {
+    cursor: default;
+    font-size: .875em !important;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+}
+  
+  .filepond--file-wrapper {
+	  background: #478e47;
+  }
+</style>
+
+{% comment %}CUSTOMIZATION BELOW{% endcomment %}

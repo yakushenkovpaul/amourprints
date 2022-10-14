@@ -1,0 +1,67 @@
+<script
+    src="https://js.afterpay.com/afterpay-1.x.js"
+    data-min="1.00"
+    data-max="2000.00"
+    async 
+></script>
+
+<script>
+window.addEventListener("load", () => {
+
+      let targetSelector = "";
+      let attributes = {};
+
+      attributes.size =   "xs"; // xs, sm, md, lg
+      attributes.showUpperLimit = false;
+      attributes.badgeTheme = "black-on-mint";
+      attributes.logoType = "compact-badge";
+      attributes.isEligible = true;
+      attributes.locale = "en_US";
+      attributes.currency = "USD";
+{% if template.name contains 'product' %}
+
+        let title = {{product.title | json}};
+        if (title.includes("Gift Card")) attributes.isEligible = false; 
+		targetSelector = '#AddToCart'; 
+  
+    	let priceSelector = (document.querySelector(".ggs > .money")) ? ".ggs > .money" : ".price--large";
+  		attributes.amountSelector = priceSelector;
+  
+  		const priceWrapper = document.querySelector('[id^=price-template--]');
+        const productConfig = { characterData: true, attributes: true, childList: true, subtree: true };
+        const productCallback = (mutationsList, observer) => {    
+          document.querySelector('afterpay-placement') && document.querySelector('afterpay-placement').remove();
+          attributes.amountSelector = priceSelector;
+           Afterpay.createPlacements({
+          targetSelector, 
+          attributes
+      	  });      
+      	};
+            
+        const observer = new MutationObserver(productCallback);
+        observer.observe(priceWrapper, productConfig); 
+  
+      Afterpay.createPlacements({
+          targetSelector, 
+          attributes
+      });    
+
+      
+{% endif %}      
+                               
+});
+</script>
+<style>
+  @media screen and (max-width:770px){ 
+     afterpay-placement {}
+  }
+  @media screen and (min-width:771px){
+     afterpay-placement {}
+  }
+  afterpay-placement {
+/*     --logo-badge-width: 100px; */
+    color: #373e46;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+</style>

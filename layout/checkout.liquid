@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {%include 'checkout-test-inline-styles'%}
+    {{ content_for_header }}
+
+    
+    {%comment%}
+    {{ checkout_stylesheets }}
+    {{ 'cf-checkout.css' | asset_url | stylesheet_tag }}
+    {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-M3T65PB"></script>
+    {%endcomment%}
+    {{ checkout_scripts }}
+    
+
+    
+  </head>
+
+
+  <body>
+    <!--TrustedSite Code-->
+    <script>
+{
+    
+var selectors = {
+checkoutPayment: "#main-header",
+checkoutSummary: "#order-summary > div > div.order-summary__section.order-summary__section--total-lines",
+checkoutMobile: "step__footer"
+};
+
+//supporting code
+
+async function waitGet(type, selector, times) {
+    for (var i = 0; i < times; i++) {
+        if (type == 'querySelector') {
+            if (document.querySelector(selector)) return document.querySelector(selector);
+        } else if (type == 'id') {
+            if (document.getElementById(selector)) return document.getElementById(selector);
+        } else if (type == 'class') {
+            if (document.getElementsByClassName(selector).length != 0) return document.getElementsByClassName(selector);
+        } else {
+            return null;
+        }
+        await new Promise(resolve => {setTimeout(resolve, 100)});
+    }
+    return null;
+}
+
+async function addMediaQuery(id, width, lessThan, greaterThan) {
+    async function resize() {
+        var p = document.getElementById(id);
+        if (!p) return;
+        
+        if (window.innerWidth < width) {
+            for (var att in lessThan) p.style[att] = lessThan[att];
+        } else {
+            for (var att in greaterThan) p.style[att] = greaterThan[att];
+        }
+    }
+    resize();
+    var mq = window.matchMedia('(min-width:' + width + 'px)');
+    mq.addEventListener('change', resize);
+}
+
+async function addStyles(node, styles) {
+    for (var s in styles) node.style[s] = styles[s];
+}
+
+async function addAttributes(node, attributes) {
+    for (var a in attributes) {
+        if (node[a]) node[a] = attributes[a];
+        else node.setAttribute(a, attributes[a]);
+    }
+}
+
+function loadFloat() {
+    if(!window.TrustedSite) {
+        var t = document.createElement('script');
+        addAttributes(t, {'type':'text/javascript', 'id':'trustedsite-code', 'data-rescan':1, 'src':'https://cdn.ywxi.net/js/1.js'})
+        document.getElementsByTagName('head')[0].appendChild(t);
+    }
+}
+    
+function loadNonFloat() {
+    var promise = waitGet('id', 'trustedsite-tm-float-disable', 1);
+    promise.then(function(s) {
+        if (!s) {
+            var d = document.createElement('div');
+            d.id = "trustedsite-tm-float-disable";
+            document.getElementsByTagName("body")[0].appendChild(d);
+        }
+        loadFloat();
+    });
+}
+
+async function loadCheckoutPayment() {
+    if (window.location.toString().indexOf("/checkouts/") != -1) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (Shopify.Checkout.step == "payment_method") {
+            var promise = waitGet('querySelector', selectors.checkoutPayment, 20);
+            promise.then(function(s) {
+                if(!s) return;
+                if(document.getElementById("ts-checkout")) return;
+                
+                if(s.nextElementSibling) s.nextElementSibling.remove();
+            
+                var t = document.createElement("div");
+                t.id = "ts-checkout"
+                t.classList.add("trustedsite-trustmark");
+                addAttributes(t, {'data-type':'212', 'data-height':'36'});
+                t.style.float = "right";
+                s.appendChild(t);
+            });
+        }
+    }
+}
+
+async function loadCheckoutSummary(type) {
+    if (window.location.toString().indexOf("/checkouts/") != -1) {
+        var promise = waitGet('querySelector', selectors.checkoutSummary, 20);
+        promise.then(function(s) {
+            if(!s) return;
+            if(document.getElementById("ts-summary")) return;
+            
+            var p = document.createElement("div");
+            p.id = "ts-summary";
+            addStyles(p, {'display':'none', 'margin-top':'10px', 'text-align':'center'});
+            p.style.display = "none";
+            
+            var t = document.createElement("div");
+            t.classList.add("trustedsite-trustmark");
+            addAttributes(t, {'data-type':type});
+            
+            p.appendChild(t);
+            s.appendChild(p);
+            
+            addMediaQuery('ts-summary', 1000, {'display':'none'}, {'display':'block'});
+        });
+    }
+}
+
+async function loadCheckoutMobile(type) {
+    if (window.location.toString().indexOf("/checkouts/") != -1) {
+        var promise = waitGet('class', selectors.checkoutMobile, 20);
+        promise.then(function(s) {
+            if(!s || s.length == 0) return;
+            if(document.getElementById("ts-mobile")) return;
+            s = s[0];
+            
+            var p = document.createElement("div");
+            p.id = "ts-mobile";
+            addStyles(p, {'display':'none', 'margin-top':'10px', 'text-align':'center'});
+            p.style.display = "none";
+            
+            var t = document.createElement("div");
+            t.classList.add("trustedsite-trustmark");
+            addAttributes(t, {'data-type':type});
+            
+            p.appendChild(t);
+            s.parentNode.insertBefore(p, s.nextSibling);
+            
+            addMediaQuery('ts-mobile', 1000, {'display':'block'}, {'display':'none'});
+        });
+    }
+}
+
+//loadNonFloat();
+loadFloat();
+loadCheckoutPayment();
+loadCheckoutSummary(1001);
+loadCheckoutMobile(1001);
+    
+}
+</script>
+    <!--TrustedSite Code-->
+    
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          
+          {% if settings.checkout_show_timer %}
+          <div class="order-reservation-timer">
+            Please note: Your order is reserved for <span data-timer-label>9:21</span> minutes.
+          </div>
+          {% endif %}
+          
+          {% if settings.checkout_show_winner_notification %}
+          {% assign original_total_price = 0 %}
+          {% for line_item in checkout.line_items %}
+          {% assign original_total_price = original_total_price | plus: line_item.original_line_price %}
+          {% endfor %}
+
+          <section class="winner-notification-list">
+            {% comment %}
+            Free shipping discount
+            {% endcomment %}
+            {%- assign threshold_in_cents = settings.cart_free_shipping_threshold | times: 100 -%}
+            {% if original_total_price >= threshold_in_cents %}
+            <div class="winner-notification">
+              {{ settings.checkout_free_shipping_discount_label }}
+            </div>
+            {% endif %}
+
+            {% comment %}
+            Percentage threshold discount
+            {% endcomment %}
+            {%- assign threshold_in_cents = settings.cart_discount_threshold | times: 100 -%}
+            {% if original_total_price >= threshold_in_cents %}
+            <div class="winner-notification">
+              {{ settings.checkout_discount_threshold_label }}
+            </div>
+            {% endif %}
+          </section>
+          {% endif %}
+          
+          
+          <main class="main__content" role="main">
+            
+            {{ content_for_layout }}
+            
+            <div class="checkout-faq">
+              <h3>Have a Question?</h3>
+              <span class="faq-btn">See Our FAQs</span>
+            </div>
+            
+                <div class="faq-popup" style="display:none">
+                  <div class="faq-inr">
+                    <span class="faqClose">X</span>
+                    
+                    {%- render 'custom-faq' -%}
+                    
+                  </div>
+                  
+                </div>  
+           
+			{%include 'checkout-sidepanel-mobile'%}            
+                
+    
+    
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+          {%include 'checkout-sidepanel'%}
+          
+        </aside>
+      </div>
+    </div>
+    
+    
+<script>
+      (function() {
+        // Global reference of the keys of the line items in an array
+        let currentLineItemKeys = [];
+        {% for line_item in checkout.line_items %}
+        currentLineItemKeys.push({{ line_item.key | json }});
+        {% endfor %}
+
+        // Turn it into a JSON string for string comparison.
+        currentLineItemKeys = JSON.stringify(currentLineItemKeys);
+
+        {% if settings.checkout_show_timer %}
+        initTimer();
+        {% endif %}
+
+        /**
+       * Start counting down the timer in [data-timer-label].
+       */
+        function initTimer() {
+          let deadline;
+          if (shouldReset()) {
+            // Save a fresh new timer state, and get the new deadline
+            saveTimerState();
+            deadline = getDeadline(Date.now());
+          } else {
+            // Otherwise, there is an existing timer that we need to show
+            const timeStarted = parseInt(
+              localStorage.getItem('checkout-time-started')
+            );
+            deadline = getDeadline(timeStarted);
+          }
+
+          // Start the clock
+          const clock = document.querySelector('[data-timer-label]');
+          const timeinterval = setInterval(updateClock, 1000);
+          updateClock();
+
+          function updateClock(){
+            var t = getTimeRemaining(deadline);
+            const paddedSeconds = t.seconds.toString().padStart(2, '0');
+            clock.innerHTML = t.minutes + ':' + paddedSeconds;
+
+            if(t.total <= 0){
+              clearInterval(timeinterval);
+            }
+          }
+        }
+
+        /**
+       * Save the timer state in localStorage to help figure out whether we
+       * should reset the timer.
+       */
+        function saveTimerState() {
+          // Save the start time in local storage
+          localStorage.setItem('checkout-time-started', Date.now());
+
+          // Also save the line item keys of the cart for comparison later
+          localStorage.setItem(
+            'item-keys-when-timer-started',
+            currentLineItemKeys,
+          );
+            }
+
+            /**
+       * The timer should reset at pagestart if:
+       * - The cart has changed
+       * - The timer is off (first visit / deadline was passed)
+       */
+            function shouldReset() {
+            const timeStarted = parseInt(
+              localStorage.getItem('checkout-time-started')
+            );
+
+            // Should reset on first visit
+            if (!timeStarted) {
+              return true;
+            }
+
+            // Reset if the timer was passed
+            const deadlineDate = getDeadline(timeStarted);
+            if (deadlineDate.getTime() < Date.now()) {
+              return true;
+            }
+
+            // Reset if the cart has changed
+            const lineItemKeysInLocalStorage =
+                  localStorage.getItem('item-keys-when-timer-started');
+            if (lineItemKeysInLocalStorage) {
+              if (currentLineItemKeys !== lineItemKeysInLocalStorage) {
+                return true;
+              }
+            }
+
+            // Otherwise, do not reset
+            return false;
+          }
+
+          /**
+       * Get the deadline given a start time. Gets the countdown duration from
+       * the theme settings.
+       * Input parameter startTime should be in ms (the typical result of
+       * Date.now()).
+       */
+          function getDeadline(startTime) {
+            const minutes = {{ settings.checkout_timer_length }};
+            const deadline = new Date(startTime + (minutes * 60000));
+            return deadline;
+          }
+
+          /**
+       * Input a datestring to get an object with the time remaining until that
+       * date.
+       */
+          function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor( (t/1000) % 60 );
+            var minutes = Math.floor( (t/1000/60) % 60 );
+            return {
+              'total': t,
+              'minutes': minutes,
+              'seconds': seconds
+            };
+          }
+        })();
+    </script>
+
+    {{ tracking_code }}
+    
+ 
+    {%comment%}
+    not needed
+    {{ 'jQuery.js' | asset_url | script_tag }}
+    {%endcomment%}
+    {{ 'cf-checkout.js' | asset_url | script_tag }}
+  
+    
+    
+    
+    
+    
+     <script type="text/javascript">
+$(document).ready(function(){
+    $(".faq-btn").click(function(){
+        $(".faq-popup").show();
+      $('body').addClass('faq');
+    });
+    
+    // Show hidden paragraphs
+    $(".faqClose").click(function(){
+        $(".faq-popup").hide();
+       $('body').removeClass('faq');
+    });
+});
+</script>  
+    
+    
+    <style>
+    .order-reservation-timer {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+   .winner-notification {
+    padding: 10px;
+    background: #deffef;
+    border: 1px solid #ceefdf;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 5px;
+    line-height: 1.4;
+}
+      
+      
+      body.faq:after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #0000008f;
+        z-index:11;
+}
+    .faq-popup {
+    position: fixed;
+    z-index: 1111;
+    max-width: 500px;
+    left: 50%;
+    top: 38%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 15px;
+    width: 84%;
+}
+      span.faqClose {
+position: absolute;
+    right: 20px;
+    cursor: pointer;
+    background: #fad3d2;
+    padding: 6px 11px;
+    top: 10px;
+    border-radius: 8px;
+}
+      .faq-inr > h1 {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+      .checkout-faq span.faq-btn {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 5px;
+    display: block;
+}
+      .checkout-faq {
+    text-align: center;
+    margin-top: 10px;
+}
+      
+      
+      /* try fix the sidebar by locking it at the bottom */
+      .sidepanel-desktop {
+          position: absolute;
+          bottom: 100px;
+      }
+      
+    </style>
+    
+    
+  
+
+</body>
+  
+  {%comment%}
+  jquery was already imported
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  {%endcomment%}
+
+  <script> 
+    if (Shopify.Checkout.step === "contact_information") {
+        Checkout.$('[data-drawer-toggle="[data-order-summary]"]').click();
+    }
+</script>
+  
+  <script>
+
+    $(document).on('page:load page:change', function() {    
+      // Check if element exists
+      if($("[data-select-gateway='111939078']").length){
+        document.querySelectorAll("[data-select-gateway='111939078']")[0].getElementsByClassName("radio__label__primary")[0].innerHTML = 'Pay {{ checkout.total_price | money }} by your Credit or Debit Card';
+      }
+      // Check if element exists
+      if($("[data-select-gateway='111939014']").length){
+        document.querySelectorAll("[data-select-gateway='111939014']")[0].getElementsByClassName("radio__label__primary")[0].innerHTML = 'Pay {{ checkout.total_price | money }} with PayPal Buyer Protection';
+        document.querySelector("[data-select-gateway='111939014']").childNodes[3].innerHTML += '<span class="radio__label__accessory"><span class=payment-icon><img src=https://cdn.shopify.com/s/assets/checkout/offsite-gateway-logos/paypal@2x-768388b0667bef1aa9a7cf02fa1cc2184c2915a90d4cdd62dde223f74f2acbfc.png></span>';
+      }
+      // Check if element exists
+      if($("[data-select-gateway='196116486']").length){
+        document.querySelectorAll("[data-select-gateway='196116486']")[0].getElementsByClassName("radio__label__primary")[0].innerHTML = 'Pay {{ checkout.total_price | money }} with Amazon Pay';
+        document.querySelector("[data-select-gateway='196116486']").childNodes[3].innerHTML += '<span class="radio__label__accessory"><span class=payment-icon><img src=https://cdn.shopify.com/s/files/1/1549/0833/files/1280px-Amazon_Pay_logo.svg_0fe8fb19-c065-419e-8556-f78a014f8560.png></span>';
+      }
+      // Check if element exists      
+      if($("[data-select-gateway='37890916432']").length){
+        document.querySelectorAll("[data-select-gateway='37890916432']")[0].getElementsByClassName("radio__label__primary")[0].innerHTML = 'Pay {{ checkout.total_price | divided_by: 4 | money }} in 4 biweekly instalments with AfterPay';
+        document.querySelector("[data-select-gateway='37890916432']").childNodes[3].innerHTML += '<span class="radio__label__accessory"><span class=payment-icon><img src=https://cdn.shopify.com/s/files/1/1549/0833/files/1280px-Afterpay-logo.svg_885aeb9e-8288-475f-88c5-4b62c2e9d749.png></span>';
+      }
+    });
+  </script>
+   {% include 'shipping-methods-checkout' %}
+</html>

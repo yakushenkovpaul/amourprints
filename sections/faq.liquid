@@ -1,0 +1,135 @@
+<section id="" class="shopify-section spaced-section spaced-section--full-width faq_section">
+  <div class="page-width">
+    <h2>Have A Question?</h2>
+  </div>
+</section> 
+<div class="faq__content page-width">
+  {%- assign expand_questions = section.settings.expand_questions -%}
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'separator' -%}
+        <h3 class="shopify_explorer_faq__separator h3" {{ block.shopify_attributes }}>{{ block.settings.title | escape }}</h3>
+
+      {%- when 'question' -%}
+        <div class="shopify_explorer_faq__item {% unless expand_questions %}shopify_explorer_faq__item--expandable{% endunless %}" {{ block.shopify_attributes }}>
+          <h3 class="shopify_explorer_faq__question h5 {% unless expand_questions %}linktab{% endunless %}">{{ block.settings.title }}</h3>
+          <div class="shopify_explorer_faq__answer rte">
+            {{ block.settings.answer }}
+          </div>
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+<section id="" class="shopify-section spaced-section spaced-section--full-width CTA_section">
+  <div class="page-width">
+ 	 <h2>Have a question that isn’t answered above?</h2>
+      <div class="CTA_btn">
+        <a href="/pages/customer-support">contact us</a>
+      </div>
+  </div>  
+</section>  
+{% schema %}
+  {
+    "name": "FAQs",
+	"class": "spaced-section spaced-section--full-width faqsection",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "expand_questions",
+        "label": "Expand all questions by default",
+        "default": false
+      }
+  ],
+    "blocks": [
+      {
+        "type": "separator",
+        "name": "Section separator",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+			"default": "Question",
+            "label": "Question"
+          },
+          {
+            "type": "html",
+            "id": "answer",
+			"default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "label": "Answer"
+          }
+        ]
+      }
+    ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "separator"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+<style>
+  section.CTA_section {
+    background-color: #F5F5F5;
+    padding: 7% 0;
+}
+
+section.CTA_section h2 {
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #0B163B;
+    width: 60%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+section.CTA_section .CTA_btn a {
+    background-color: #FB9AA5;
+    color: #fff;
+    padding: 13px 45px;
+    border-radius: 41px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section.CTA_section .CTA_btn {
+    text-align: center;
+}
+section#footer_above_section {
+    margin-top: 0;
+} 
+  @media(max-width:749px){
+    section.CTA_section h2 {
+    font-size: 22px;
+    line-height: 36px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+  }
+  </style>

@@ -1,0 +1,109 @@
+.steps-progress-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.step-labels {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.step-labels a {
+  font-size: 13px;
+  color: #737373;
+  min-width: 20%;
+  text-align: center;
+}
+
+.step-labels a.active-step, .step-labels a.active-step.no-link:hover {
+  color: #333;
+}
+
+.step-labels a.no-link:hover {
+  color: #737373;
+}
+
+.step-labels a:not(.no-link):hover {
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 15px;
+  margin: 5px 0 0;
+  border-radius: 16px;
+  border: 2px solid #fad3d2;
+  position: relative;
+}
+
+.progress-bar .fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  background: #fad3d2;
+  width: 0%;
+  z-index: -1;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: width 0.3s linear;
+}
+
+.progress-bar[active-step="information"] .fill {
+  width: 25%;
+}
+.progress-bar[active-step="shipping"] .fill {
+  width: 50%;
+}
+.progress-bar[active-step="payment"] .fill {
+  width: 75%;
+}
+
+.progress-bar[active-step="complete"] .fill {
+  width: 100%;
+}
+
+.steps-progress-section img {
+  height: 19px;
+  margin-top: -2px;
+}
+
+.steps-progress-section .step {
+  width: 30%;
+}
+
+.steps-progress-section .chevron-break {
+  width: auto;
+}
+
+ol.breadcrumb[role="list"] {
+  display: none !important;
+}
+
+.steps-progress-section.desktop {
+  display: block;
+}
+.steps-progress-section.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 999px) {
+  .steps-progress-section.desktop {
+    display: none;
+  }
+  .steps-progress-section.mobile {
+    display: block;
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+  .wrap > .main {
+    padding-top: 1em;
+  }
+}

@@ -1,0 +1,13 @@
+<div class="cart-count-custom">
+  <div class="container">
+  <div class="total-item-cart">
+    <span class="Header__CartCount customcount {% if cart.item_count > 0 %}is-visible{% endif %}"></span>ITEMS</div>
+   <div class="total-price-cart">
+  <p class="Cart__Total">Total:<span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total_3" style="display:none !important;"></span><span class="bcpo-cart-original-total">{{ cart.total_price | money_without_trailing_zeros }}</span></span>
+                {% if total_compare_at_price != cart.total_price  %}{% endif %}
+              </p> 
+       <button type="submit" class="cart__checkout-button button Cart__Checkout Button Button--primary" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+                  Checkout {% comment %}{{ 'sections.cart.checkout' | t }} {% endcomment %}
+                </button>
+    </div></div>
+  </div>

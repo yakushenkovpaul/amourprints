@@ -1,0 +1,115 @@
+{% comment %}
+    Renders a list of product's price (regular, sale)
+
+    Accepts:
+    - product: {Object} Product Liquid object (optional)
+    - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
+    - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
+    - price_class: {String} Adds a price class to the price element (optional)
+
+    Usage:
+    {% render 'price', product: product %}
+{% endcomment %}
+{%- liquid
+  if use_variant
+    assign target = product.selected_or_first_available_variant
+  else
+    assign target = product
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  assign available = target.available | default: false
+  assign money_price = price | money
+  assign fake_price = price | times: settings.discount_amount | divided_by: 100 
+  assign fakes_price = price | minus: fake_price | money
+
+  if target == product and product.price_varies
+    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+-%}
+<style>
+  span.gg {
+    display: none;
+}
+  </style>
+<script>
+  $(document).ready(function(){
+
+    $(".custom_collection .collection_product.rbox-2 input[type='radio']").click(function(e){
+       if($(this).is(':checked')) {
+         // $('.newprice').html('{{ up_price }}'); 
+       }
+  	 });
+    $(".custom_collection .collection_product.rbox-1 input[type='radio']").click(function(e){
+       if($(this).is(':checked')) {
+        // $('.newprice').html('{{ fakes_price }}');
+       }
+  	 });
+    
+    
+    $(".custom_collection .collection_product.rbox-1 input[type='radio']").click(function(e){
+    
+    setTimeout(function(){  
+      if ($(".collection_product.rbox-1").hasClass("Active")) {
+  			var price = $('.price-section .price-item--regular.fkprice .ggs').text();
+        $('.btn-price .money').text(price);
+		}
+
+      if ($(".collection_product.rbox-2").hasClass("Active")) {
+        var price = $('.price-section .price-item--regular.fkprice .gg').text();   
+        
+        $('.btn-price .money').text(price);
+       }
+      
+      
+    }, 1500);
+    	
+  });
+    $(".custom_collection .collection_product.rbox-2 input[type='radio']").click(function(e){
+    
+    setTimeout(function(){  
+      if ($(".collection_product.rbox-1").hasClass("Active")) {
+  			var price = $('.price-section .price-item--regular.fkprice .ggs').text();
+        $('.btn-price .money').text(price);
+		}
+
+      if ($(".collection_product.rbox-2").hasClass("Active")) {
+        var price = $('.price-section .price-item--regular.fkprice .gg').text();   
+        
+        $('.btn-price .money').text(price);
+       }
+      
+      
+    }, 1500);
+    	
+  });
+  });
+
+
+
+
+</script>
+<div class="price">
+  <dl>
+     {% if settings.fakesaleactive %}
+    <div class="price__sale">
+      <dd {% if show_badges == false %}class="price__last"{% endif %}>
+        <span class="price-item price-item--sale" id="ProductPrice">
+         <span class="newprice">{{ fakes_price }}</span> -
+        </span>
+      </dd>
+    </div>
+    {% else %}
+     <div class="price__sale">
+      <dd {% if show_badges == false %}class="price__last"{% endif %}>
+        <span class="price-item price-item--sale" id="ProductPrice">
+          {{ money_price }} -
+        </span>
+      </dd>
+    </div>
+    {% endif %}
+  </dl>
+ 
+</div>
+

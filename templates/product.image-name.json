@@ -1,0 +1,377 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "0efa444f-ca4a-43e5-90fe-db1458f34df3": {
+          "type": "popup",
+          "settings": {
+            "link_label": "Size Guide",
+            "page": "size-guide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "subtitle",
+        "price",
+        "0efa444f-ca4a-43e5-90fe-db1458f34df3",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "enable_video_looping": false,
+        "col2": "bundle-collection"
+      }
+    },
+    "1641324952ec892d96": {
+      "type": "qualityHighlights",
+      "blocks": {
+        "164132495251fb1529-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium.png",
+            "title": "Premium Quality",
+            "text": "<p>Quality that lasts a lifetime. This is something we take seriously at Amour Prints.<\/p>"
+          }
+        },
+        "164132495251fb1529-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flag.png",
+            "title": "Based in the USA",
+            "text": "<p>By shopping with us, you're supporting local jobs. Based in the USA.<\/p>"
+          }
+        },
+        "164132495251fb1529-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guarantee-certificate.png",
+            "title": "100% Happiness Guarantee",
+            "text": "<p>If you’re unhappy with your purchase for any reason let us know within 90 days.<\/p>"
+          }
+        },
+        "164132495251fb1529-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/favorites.png",
+            "title": "Thousands of Five Stars",
+            "text": "<p>We have thousands of real 5-star reviews. Seriously. People love our products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164132495251fb1529-0",
+        "164132495251fb1529-1",
+        "164132495251fb1529-2",
+        "164132495251fb1529-3"
+      ],
+      "settings": {}
+    },
+    "16302481331c0ecfa3": {
+      "type": "image-with-text",
+      "blocks": {
+        "16302481331c0ecfa3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Museum Quality"
+          }
+        },
+        "16302481331c0ecfa3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>State of the art technology for printing.<br\/>Choice poly-cotton canvas.<br\/>Lifetime UV protection to stay vibrant.<br\/>Solid wood backing.<\/p>"
+          }
+        },
+        "16302481331c0ecfa3-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "\/products\/song-lyrics-canvas-custom-art-print-wedding-name"
+          }
+        }
+      },
+      "block_order": [
+        "16302481331c0ecfa3-0",
+        "16302481331c0ecfa3-1",
+        "16302481331c0ecfa3-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/larka_1000x_a20e4b2d-9c89-46a4-b5e2-76661ca7dc8d.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "text_first"
+      }
+    },
+    "163024865581098471": {
+      "type": "image-with-text",
+      "blocks": {
+        "163024865581098471-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Gift For Anyone"
+          }
+        },
+        "163024865581098471-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There is always that special song that takes you back to a sea of memories. Relive your memories and let us create a personalized canvas just for you.<\/p>"
+          }
+        },
+        "163024865581098471-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now",
+            "button_link": "\/products\/song-lyrics-canvas-custom-art-print-wedding-name"
+          }
+        }
+      },
+      "block_order": [
+        "163024865581098471-0",
+        "163024865581098471-1",
+        "163024865581098471-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/age-people-concept-senior-couple-with-gift-box-lights-background-woman-white-knited-sweatre_1000x_5c758675-77b5-4871-8145-f654e1d8cdc9.jpg",
+        "height": "adapt",
+        "color_scheme": "background-1",
+        "layout": "image_first"
+      }
+    },
+    "16302488779e49fd78": {
+      "type": "logo-list",
+      "blocks": {
+        "16302488779e49fd78-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_12.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "16302488779e49fd78-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_11.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "16302488779e49fd78-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_13.png",
+            "title": "",
+            "text": ""
+          }
+        },
+        "ad33f95e-5681-43de-addd-ffec73e2fe2d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Image_14.png",
+            "title": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "16302488779e49fd78-0",
+        "16302488779e49fd78-1",
+        "16302488779e49fd78-2",
+        "ad33f95e-5681-43de-addd-ffec73e2fe2d"
+      ],
+      "settings": {
+        "title": "Featured On",
+        "subtitle": "",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "product_faq": {
+      "type": "product_faq",
+      "blocks": {
+        "467c2187-40bf-47df-aa10-97ff398d79eb": {
+          "type": "column",
+          "settings": {
+            "title": "What is the canvas made of?",
+            "text": "Each canvas is made with choice poly-cotton canvas. Includes Lifetime UV protection to stay vibrant. Solid wood backing."
+          }
+        },
+        "c86c223c-d320-4367-957c-1da15e7f5c9b": {
+          "type": "column",
+          "settings": {
+            "title": "Do you have my song?",
+            "text": "Yes! We can do any song. Just let us know what song you want and we can do the rest."
+          }
+        },
+        "fd5bfc89-bec4-43a3-97b5-e2fa5f87f7f3": {
+          "type": "column",
+          "settings": {
+            "title": "How do i order?",
+            "text": "Select the size and quantity of canvas and any customizations and we will do the rest! We will send a preview within 3-4 business days to get your approval before production\/shipment."
+          }
+        },
+        "8168bc97-e58d-4a2d-8fd9-c9fa8f34aa44": {
+          "type": "column",
+          "settings": {
+            "title": "What is the best size for me?",
+            "text": "Our most popular size is the 24x48''. We do recommend measuring the space where you want the canvas to be hung."
+          }
+        },
+        "96575bac-0453-49a7-9cb7-f383de220d85": {
+          "type": "column",
+          "settings": {
+            "title": "What is the turnaound time?",
+            "text": "Short answer with standard shipping around 2 weeks. Priority shipping 1 week. The sooner the proof is approve the faster we can get it out."
+          }
+        },
+        "5866d0af-7056-4b89-9f63-32f69bc011a5": {
+          "type": "column",
+          "settings": {
+            "title": "Does the canvas arrive ready to hang?",
+            "text": "Yes, it arrives ready to hang with a wooden backing. All you need to do is decide where to hang your new canvas."
+          }
+        }
+      },
+      "block_order": [
+        "467c2187-40bf-47df-aa10-97ff398d79eb",
+        "c86c223c-d320-4367-957c-1da15e7f5c9b",
+        "fd5bfc89-bec4-43a3-97b5-e2fa5f87f7f3",
+        "8168bc97-e58d-4a2d-8fd9-c9fa8f34aa44",
+        "96575bac-0453-49a7-9cb7-f383de220d85",
+        "5866d0af-7056-4b89-9f63-32f69bc011a5"
+      ],
+      "settings": {
+        "title": "Frequently asked questions"
+      }
+    },
+    "1630405463dc49f91c": {
+      "type": "cstm_common_section",
+      "blocks": {
+        "1630405463dc49f91c-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_world_1937837_000000_2x_e1761890-e6ac-43d9-90c7-dde4907adc92.png",
+            "title": "Free shipping worldwide",
+            "text": "<p><br\/><\/p>"
+          }
+        },
+        "1630405463dc49f91c-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_quality_652198_000000_2x_3dfb945c-8159-4096-9541-7babd9d9bbc8.png",
+            "title": "Lifetime Warranty",
+            "text": "<p><br\/><\/p>"
+          }
+        },
+        "1630405463dc49f91c-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/np_donate_3147033_000000_2x_edefa68f-e0c7-4130-82c8-d049e1411207.png",
+            "title": "10% profits donated to World Vision relief fund",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "1630405463dc49f91c-0",
+        "1630405463dc49f91c-1",
+        "1630405463dc49f91c-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "subtitle": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true
+      }
+    },
+    "16326405269dcb0316": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% if product.id == 6588895101008 or product.id == 6598224117840 or product.id == 6615042162768 or product.id == 6604808880208 or product.id == 6598228213840 or product.id == 4692497793104 or product.id == 4877550649424 or product.id == 4784090873936 or product.id == 4785676386384 or product.id == 4875641782352 or product.id == 6570280419408 %}\n<div id=\"stamped-main-widget\" class=\"stamped-main-widget\"><\/div>\n{% else %}\n<!-- Stamped - Begin main-widget -->\n<div id=\"stamped-main-widget\" class=\"stamped-main-widget\" data-product-id=\"{{ product.id }}\" data-name=\"{{ product.title | escape }}\" data-url=\"{{ shop.url }}{{ product.url }}\" data-image-url=\"{{ product.featured_image | product_img_url: \"large\" |replace: \" ? \", \" % 3F\" | replace: \"& \",\" % 26\"}}\" data-description=\"{{ product.description | escape }}\" data-product-sku=\"{{product.handle}}\" data-product-type=\"{{product.type}}\"> {{ product.metafields.stamped.reviews }} <\/div>\n<!-- Stamped - End main-widget -->\n {% endif %}"
+      }
+    },
+    "16303038301f820c6e": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image_2": "shopify:\/\/shop_images\/Amour_UI_1_12.png",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Discover the Perfect Gift",
+        "image_ratio": "portrait",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1641324952ec892d96",
+    "16302481331c0ecfa3",
+    "163024865581098471",
+    "16302488779e49fd78",
+    "product_faq",
+    "1630405463dc49f91c",
+    "16326405269dcb0316",
+    "16303038301f820c6e",
+    "product-recommendations"
+  ]
+}

@@ -1,0 +1,386 @@
+<input type="hidden" class="main_selected_variant">
+<div class="custom_collection">
+
+  {% assign collection = collections[section.settings.col2] %}
+
+  {% for product in collection.products limit: 2 %}
+  <div class="collection_product {{ forloop.index }} rbox-{{ forloop.index }}" pro_id="{{ product.id }}" variant_id="{% for variant in product.variants limit:1%}{{variant.id}}{% endfor%}">
+
+    {% if forloop.index == 2 %}
+    <div class="upgrade_frame">
+      <p>UPGRADE AND SAVE $59</p>
+    </div>
+    {% endif %}
+
+    <div class="product_wrapper">
+      <div class="custom_radio_button">
+        <label class="container">
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="product_img">
+        <img src="{{ product.featured_image.src | product_img_url: '500x' }}">
+      </div> 
+      <div class="product_info">
+        <input type="hidden" class="product_varinat" var_id="{% for variant in product.variants limit:1%}{{variant.id}}{% endfor%}">
+        <p class="product_title">{{ product.title }}</p>
+        <div class="product_sort_description">{{ product.description | truncate: 80 }}</div>
+        <p class="price" data_price="{{ product.price }}"><span class="compare_at_price"> {{ product.compare_at_price | money }}</span><span class="custom_car_price"><span class="pluse_symbol"></span>{% if forloop.index == 1 %} Free {% else %}{{ product.price | money }}{% endif %}</span></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    setTimeout(function(){
+      $(".custom_collection .collection_product:first-child").addClass('Active');
+      $(".custom_collection .collection_product:first-child  input[type='radio").attr('checked', 'checked');
+
+      var variant_id = $('.custom_collection .collection_product.Active').attr('variant_id');
+      $('.main_selected_variant').attr('value',variant_id);
+    },500);
+
+
+    $(".custom_collection .collection_product input[type='radio']").click(function(e){
+      //e.preventDefault();
+      $(".custom_collection .collection_product").removeClass('Active');
+      $(".custom_collection .collection_product input[type='radio']").removeAttr('checked', 'checked');
+      $(this).attr('checked', 'checked');
+      $(this).closest('.custom_collection .collection_product').addClass('Active');
+
+      var variant_id = $(this).closest('.collection_product').attr('variant_id');
+      $('.main_selected_variant').attr('value',variant_id);
+    });
+  });
+
+
+
+</script>
+
+
+<style>
+  .custom_collection {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    padding-top: 10px;
+
+  }
+  .custom_collection .collection_product {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    padding: 5px;
+    position: relative;
+  }
+
+  a.custom_bundle_cart {
+    font-size: 9px;
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.36px;
+    width: 100%;
+    color: #000;
+    padding: 8px 30px;
+    margin-top: 10px;
+    background-color: var(--color-btn-primary);
+
+      }
+  /* .custom_collection .product-form__controls-group {
+  display: inline-block;
+  width: 100%;
+  }
+  */
+
+  div#shopify-section-blogsidebar {
+    display: inline-block;
+    width: 29%;
+    vertical-align: top;
+    padding-left: 40px;
+  }
+  div#shopify-section-article-template {
+    display: inline-block;
+    width: 69%;
+  }
+  .custom_collection .cusrom_varinat_sel {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    flex-basis: 100%;
+  }
+
+  .custom_collection ul li.var_option p {
+    border: 1px solid;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    font-size: 9px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .custom_collection ul li.var_option {
+    display: inline-block;
+    float: left;
+  }
+  .custom_collection ul li.var_option.selected p {
+    border: 2px solid black!important;
+  }
+  .custom_collection ul#SingleOptionSelector-1 .var_option p {
+    font-size: 0;
+  }
+  .custom_collection .product-form__item label {
+    line-height: 9.96px;
+  }
+
+  a.btn.btn--secondary.btn--has-icon-before.return-link {
+    display: none;
+  }
+
+
+  .product_wrapper {
+    width: 100%;
+    display: inline-block;
+    float: left;
+  }
+
+  .product_wrapper .custom_radio_button {
+    width: 8%;
+    display: inline-block;
+    float: left;
+  }
+  .product_wrapper .product_img {
+    width: 20%;
+    display: inline-block;
+    float: left;
+    width: 90px; 
+    height: 90px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .product_wrapper .product_info {
+    width: 60%;
+    display: inline-block;
+    float: left;
+    padding-left: 10px;
+  }
+  .product_wrapper .product_img img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  .product_wrapper .product_info p.product_title {
+    margin: 0;
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+    max-width: 75%;
+    line-height: 16px;
+    font-size: 13px;
+  }
+  .custom_collection .collection_product:nth-child(2) .product_sort_description {
+    margin-top: 10px;
+  }
+
+  .product_wrapper .product_info p.price span.compare_at_price {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+  }
+  .product_wrapper .product_info p.price span.compare_at_price:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #707070;
+    left: -5px;
+    top: 43%;
+  }
+
+
+  .product_sort_description {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    font-size: 13px;
+
+  }
+  .product_sort_description p,span {
+    margin: 0;
+    padding: 0;
+    line-height: 15px;
+    font-size: 13px;
+  }
+  .custom_collection .collection_product {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    padding: 5px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    background-color: #fafafa;
+    color: #0b163b;
+    margin-bottom: 16px;
+  }
+  .product_wrapper .product_info p.price {
+    position: absolute;
+    top: -16px;
+    right: 8px;
+    bottom: 0;
+    display: inline-block;
+    float: left;
+  }
+
+
+
+
+
+
+
+
+
+
+  /* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 17px 25px 9px 1px;
+  }
+
+
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #fe8db6;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  .upgrade_frame p {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    margin-left: 8%;
+    max-width: 47%;
+    background: #fe8db6;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+  }
+  .upgrade_frame {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    margin-bottom: 7px;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+
+    .product_wrapper .product_img {
+      border-radius: 5px;
+      width: 75px
+    }
+    .product_wrapper .product_info p.product_title {
+      max-width: 81%;
+      line-height: 18px;
+    }
+    .container .checkmark:after {
+      top: 6px;
+      left: 6px;
+    }
+    .checkmark {
+      height: 20px;
+      width: 20px;
+    }
+    .checkmark {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 10px;
+      width: 10px;
+      background-color: #eee;
+      border-radius: 50%;
+      border: 2px solid;
+      padding: 12px 19px 8px 1px;
+    }
+
+    .product_wrapper .product_info p.price {
+      position: absolute;
+      right: -4px;
+      display: grid;
+      top: -9px;
+      height: 38px;
+    }
+    span.pluse_symbol {
+      display: none;
+    }
+    .upgrade_frame p {
+      max-width: 70%;
+    }
+  }
+
+</style>
